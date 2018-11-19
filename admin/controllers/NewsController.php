@@ -12,7 +12,7 @@ class NewsController extends Controller
             // Ngược lại nếu đã đăng nhập
             $permission = $_SESSION['user']['roles'];
             // Kiểm tra quyền của người đó có phải là admin hay không
-            if ($permission == 1 || $permission == 3) {
+            if ($permission == 0 || $permission == 3) {
                 // Nếu không phải admin thì xuất thông báo
                 echo "Bạn không đủ quyền truy cập vào trang này<br>";
                 echo "<a href='http://lpshop.test/admin/index.php?controller=category&action=index'> Click để quay lại</a>";

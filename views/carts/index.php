@@ -3,7 +3,7 @@ require_once 'helpers/Helper.php';
 ?>
 <!--Timeline items start -->
 <div class="timeline-items container">
-    <h2>Giỏ hàng của bạn</h2>
+    <h2>Your cart</h2>
     <?php if (isset($_SESSION['cart'])): ?>
         <form action="" method="post">
             <table class="table table-bordered">

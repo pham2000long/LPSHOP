@@ -33,7 +33,7 @@ RewriteRule contact.html index.php?controller=contact&action=index
 RewriteRule index.html index.php
 # Rewrite cho trang đăng nhập
 RewriteRule login.html index.php?controller=user&action=login
-# Rewrite cho trang đăng nhập
+# Rewrite cho trang đăng ký
 RewriteRule register.html index.php?controller=user&action=register
 # Rewrite cho trang women
 RewriteRule women.html index.php?controller=home&action=women

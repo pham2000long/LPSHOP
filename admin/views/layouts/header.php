@@ -23,7 +23,7 @@
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user" src="assets/<?php echo "uploads/" . $_SESSION['user']['avatar']; ?>"
-                         alt="Header Avatar">
+                         alt="Header Avatar" >
                     <span class="d-none d-xl-inline-block ml-1"><?php echo $_SESSION['user']['first_name']. " " .$_SESSION['user']['last_name'];?></span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

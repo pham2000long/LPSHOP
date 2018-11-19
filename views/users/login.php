@@ -47,9 +47,8 @@
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_form">
-                            <div class="login_part_form_iner">
-
-                                <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                            <div class="login_part_form_inner">
+                                <form class="row contact_form" action="#" method="POST" novalidate="novalidate">
                                     <div class="col-md-12 form-group p_star">
                                         <input type="text" class="form-control" id="username" name="username" value=""
                                             placeholder="Username">
@@ -62,7 +61,7 @@
                                         <div class="creat_account d-flex align-items-center">
 
                                         </div>
-                                        <button type="submit" value="submit" class="btn_3">
+                                        <button type="submit" name="submit" value="submit" class="btn_3">
                                             log in
                                         </button>
                                         <a class="lost_pass" href="#">forget password?</a>
@@ -93,17 +92,17 @@
     <!-- One Page, Animated-HeadLin -->
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/animated.headline.js"></script>
-    
+
     <!-- Scroll up, nice-select, sticky -->
     <script src="assets/js/jquery.scrollUp.min.js"></script>
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/jquery.sticky.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
-    
-    <!-- Jquery Plugins, main Jquery -->	
+
+    <!-- Jquery Plugins, main Jquery -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
-    
+
 </html>

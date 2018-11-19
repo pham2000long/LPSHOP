@@ -59,7 +59,7 @@
                         <h6><a href="<?php echo $product_link; ?>"><?php echo $product['title'] ?></a></h6>
                         <div class="product__price">$ <?php echo number_format($product['price']) ?></div>
 
-                            <span class="add-to-cart"
+                            <span class="add-to-cart" id="add-to-cart"
                                   data-id="<?php echo $product['id']; ?>">
                                 <a href="#" style="color: white">Add to cart</a>
                             </span>
