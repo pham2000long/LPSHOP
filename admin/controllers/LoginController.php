@@ -1,5 +1,7 @@
 <?php
 require_once 'models/User.php';
+require_once 'models/PasswordReset.php';
+require_once  'helpers/Helper.php';
 
 class LoginController
 {
@@ -102,6 +104,91 @@ class LoginController
         }
 
         $this->content = $this->render('views/users/register.php');
+        require_once 'views/layouts/main_login.php';
+    }
+
+    /**
+     *  Quên mật khẩu
+     */
+    public function forgotpw() {
+//        echo "<pre>";
+//        print_r($_POST);
+//        echo "<pre>";
+        if (isset($_POST['submit'])){
+            $email = $_POST['email'];
+            if (empty($email) || !filter_var($email,FILTER_VALIDATE_EMAIL)){
+                $this->error = "Email không được để trống, sai định dạng";
+            }
+            $user_model = new User();
+            $user_model->email = $email;
+            $user = $user_model->findUser();
+
+            if (empty($this->error) && isset($user['id'])) {
+//                echo "<pre>";
+//                print_r($user);
+//                echo "<pre>";
+                $token = Helper::getToken();
+                $password_reset = new PasswordReset();
+                $password_reset->member_id = $user['id'];
+                $password_reset->token = md5($token);
+                $is_insert = $password_reset->insert();
+                if ($is_insert) {
+                    $_SESSION['success'] = 'Vui lòng kiểm tra email của bạn';
+                    $subject = "Từ LPSHOP.com - Quên mật khẩu";
+                    $username = 'bangnk2000@gmail.com';
+                    $password = 'froucfwmoarpouiq';
+                    $link = "http://localhost/lpshop/admin/index.php?controller=login&action=resetPassword&token=$token";
+                    $body = $this->render('views/users/mail_template_pw.php',[
+                        'link' => $link
+                    ]);
+                    Helper::sendMail($email,$subject,$body,$username,$password);
+                } else {
+                    $_SESSION['error'] = 'Hệ thống có lỗi, vui lòng chờ';
+                }
+                header('Location: index.php?controller=login&action=login');
+                exit();
+            }
+        }
+        $this->content = $this->render('views/users/forgotpw.php');
+        require_once 'views/layouts/main_login.php';
+    }
+    public function resetPassword() {
+//        echo "<pre>";
+//        print_r($_GET);
+//        print_r($_POST);
+//        echo "<pre>";
+        if (!isset($_GET['token'])){
+            header("Location: index.php?controller=login&action=login");
+            exit();
+        }
+        if (isset($_POST['submit'])) {
+            $password = $_POST['password'];
+            $password_confirm = $_POST['password_confirm'];
+            if ($password != $password_confirm) {
+                $this->error = 'Password nhập lại chưa đúng';
+            }
+            if (empty($this->error)) {
+                $token = $_GET['token'];
+                $password_reset_model = new PasswordReset();
+                $password_reset_model->token = md5($token);
+                $user = $password_reset_model->getID();
+                $id = $user['member_id'];
+
+                $password_reset_model->updateValid();
+
+                $user_model = new User();
+                $user_model->password = md5($password);
+                $is_change = $user_model->changePassword($id);
+                if ($is_change){
+                    $_SESSION['success'] = 'Đổi mật khẩu thành công';
+                }else {
+                    $_SESSION['error'] = 'Đổi mật khẩu thất bại';
+                }
+                header("Location: index.php?controller=login&action=login");
+                exit();
+            }
+        }
+        $this->content = $this->render('views/users/restpw.php');
         require_once 'views/layouts/main_login.php';
     }
 }

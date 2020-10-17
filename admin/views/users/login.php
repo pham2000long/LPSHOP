@@ -12,6 +12,7 @@
         <div class="form-group">
             <input type="submit" name="submit" value="Đăng nhập" class="btn btn-primary"/>
             <p>
+                <a href="index.php?controller=login&action=forgotpw">Quên mật khẩu?</a> <br>
                 Chưa có tài khoản, <a href="index.php?controller=login&action=register">Đăng ký</a> ngay
             </p>
         </div>

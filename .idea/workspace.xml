@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1bc6211e-2fc1-478f-90fc-d58e7c0ac9b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/views/users/mail_template_pw.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/models/PasswordReset.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models/PasswordReset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/users/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/login.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ihMOVBLwWLp3ULeUuYmQIr1Igp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bc6211e-2fc1-478f-90fc-d58e7c0ac9b9" name="Default Changelist" comment="" />
+      <created>1602355343118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602355343118</updated>
+      <workItem from="1602355344477" duration="4102000" />
+      <workItem from="1602403694468" duration="5653000" />
+      <workItem from="1602775091874" duration="6978000" />
+      <workItem from="1602909944785" duration="52000" />
+      <workItem from="1602910068020" duration="4049000" />
+      <workItem from="1602924598307" duration="1433000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Deployment" timestamp="1602914521377">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1602914521377" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602909953696">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602909953696" />
+    <state x="579" y="135" key="NewPhpClassDialog" timestamp="1602403991624">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="579" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1602403991624" />
+    <state x="555" y="143" key="ftp.server.browser" timestamp="1602914487920">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="555" y="143" key="ftp.server.browser/0.0.1536.824@0.0.1536.824" timestamp="1602914487920" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8557dca3-6d3e-4139-ae15-a862ffa08d5d" name="lpshop" url="http://php0520e-nhom1.itpsoft.com.vn">
+        <fileTransfer rootFolder="/public_html" host="php0520e-nhom1.itpsoft.com.vn" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

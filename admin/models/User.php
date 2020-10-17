@@ -16,6 +16,7 @@ class User extends Model {
     public $status;
     public $created_at;
     public $updated_at;
+    public $token;
 
     public $str_search;
 
@@ -145,5 +146,21 @@ VALUES(:username, :password, :status)");
         ];
         return $obj_insert->execute($arr_insert);
     }
-
+    public function findUser() {
+        $obj_find = $this->connection->prepare("SELECT * FROM users WHERE email=:email");
+        $arr_find = [
+            ':email' => $this->email
+        ];
+        $obj_find->execute($arr_find);
+        $mail = $obj_find->fetch(PDO::FETCH_ASSOC);
+        return $mail;
+    }
+    public function changePassword($id) {
+        $obj_change = $this->connection->prepare("UPDATE users SET password = :password WHERE id = $id");
+        $arr_change = [
+            ':password' => $this->password
+        ];
+        $obj_change->execute($arr_change);
+        return $obj_change->execute($arr_change);
+    }
 }
