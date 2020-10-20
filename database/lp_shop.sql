@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th10 11, 2020 lúc 08:44 AM
+-- Thời gian đã tạo: Th10 17, 2020 lúc 11:02 AM
 -- Phiên bản máy phục vụ: 5.7.24
 -- Phiên bản PHP: 7.4.6
 
@@ -116,6 +116,16 @@ CREATE TABLE `password_reset` (
   `create_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Đang đổ dữ liệu cho bảng `password_reset`
+--
+
+INSERT INTO `password_reset` (`id`, `member_id`, `token`, `is_valid`, `expired_at`, `create_at`) VALUES
+(13, 1, '83a35b1146178866f00102f671ba9285', 0, '2020-10-17 05:52:07', '2020-10-17 05:42:07'),
+(14, 1, '1860d99b0e416927a77c63551076480b', 0, '2020-10-17 06:03:56', '2020-10-17 05:53:56'),
+(15, 1, 'f4d31fb89cf4bc3174af0895780c271f', 0, '2020-10-17 09:37:17', '2020-10-17 09:27:17'),
+(16, 1, '290d62fa1e7666fd2d78db70d9da59ee', 1, '2020-10-17 09:48:55', '2020-10-17 09:38:55');
+
 -- --------------------------------------------------------
 
 --
@@ -168,7 +178,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `first_name`, `last_name`, `phone`, `address`, `email`, `avatar`, `jobs`, `last_login`, `facebook`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', NULL, NULL, NULL, NULL, 'bangnk2000@gmail.com', NULL, NULL, NULL, NULL, 1, '2020-10-08 16:38:17', NULL);
+(1, 'admin', '81dc9bdb52d04dc20036dbd8313ed055', NULL, NULL, NULL, NULL, 'bangnk2000@gmail.com', NULL, NULL, NULL, NULL, 1, '2020-10-08 16:38:17', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -236,7 +246,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT cho bảng `password_reset`
 --
 ALTER TABLE `password_reset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `products`

@@ -1,106 +1,122 @@
+<!doctype html>
+<html lang="en">
 
-<!DOCTYPE html>
-<html>
 <head>
 
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <title>Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <title>Dashbord</title>
-
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/libs/dropify/css/dropify.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body>
+<body data-topbar="dark">
 
-<div id="wrapper">
-<?php
-require_once 'views/layouts/header.php';
-?>
+<!-- Begin page -->
+<div id="layout-wrapper">
 
-    <div id="page-wrapper" class="gray-bg">
-        <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+    <?php
+    require_once 'views/layouts/header.php';
+    ?>
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="main-content">
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="message">
+                    <?php if (isset($_SESSION['error'])): ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            echo $_SESSION['error'];
+                            unset($_SESSION['error']);
+                            ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (!empty($this->error)): ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            echo $this->error;
+                            ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if (isset($_SESSION['success'])): ?>
+                        <div class="alert alert-success">
+                            <?php
+                            echo $_SESSION['success'];
+                            unset($_SESSION['success']);
+                            ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li>
-                        <a href="index.php?controller=user&action=logout">
-                            <i class="fa fa-sign-out"></i> Log out
-                        </a>
-                    </li>
-                </ul>
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0 font-size-18"><?php
+                                $_GET['controller'] = ucfirst($_GET['controller']);
+                                echo $_GET['controller']; ?></h4>
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Time Zone</a></li>
+                                    <li class="breadcrumb-item active"><?php
+                                        $_GET['controller'] = ucfirst($_GET['controller']);
+                                        echo $_GET['controller']; ?></li>
+                                </ol>
+                            </div>
 
-            </nav>
-        </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>Dashbord</h2>
-            </div>
-        </div>
-        <!-- Messaeg Wrapper. Contains messaege error and success -->
-        <div class="message-wrap content-wrap content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <?php if (isset($_SESSION['error'])): ?>
-                    <div class="alert alert-danger">
-                        <?php
-                        echo $_SESSION['error'];
-                        unset($_SESSION['error']);
-                        ?>
+                        </div>
                     </div>
-                <?php endif; ?>
+                </div>
+                <!-- end page title -->
+                <?php echo $this->content; ?>
+            </div> <!-- container-fluid -->
+        </div>
+        <!-- End Page-content -->
 
-                <?php if (!empty($this->error)): ?>
-                    <div class="alert alert-danger">
-                        <?php
-                        echo $this->error;
-                        ?>
-                    </div>
-                <?php endif; ?>
 
-                <?php if (isset($_SESSION['success'])): ?>
-                    <div class="alert alert-success">
-                        <?php
-                        echo $_SESSION['success'];
-                        unset($_SESSION['success']);
-                        ?>
-                    </div>
-                <?php endif; ?>
-                <!--        <div class="alert alert-danger">Lỗi validate</div>-->
-                <!--        <p class="alert alert-success">Thành công</p>-->
-            </section>
-        </div>
-        <div class="wrapper wrapper-content">
-<!--            Nội dung hiển thị tại đây-->
-            <?php echo $this->content; ?>
-        </div>
     </div>
-        <?php require_once 'views/layouts/footer.php';?>
-    </div>
+    <!-- end main content-->
+    <?php require_once 'views/layouts/footer.php';?>
 </div>
+<!-- END layout-wrapper -->
 
 
 
-<!-- Mainly scripts -->
-<script src="assets/js/jquery-3.5.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<!-- JAVASCRIPT -->
+<script src="assets/libs/jquery/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/libs/metismenu/metisMenu.min.js"></script>
+<script src="assets/libs/simplebar/simplebar.min.js"></script>
+<script src="assets/libs/node-waves/waves.min.js"></script>
 
-<!-- Custom and plugin javascript -->
-<script src="assets/js/inspinia.js"></script>
-<script src="assets/js/plugins/pace/pace.min.js"></script>
-<!--CKEditor -->
-<script src="assets/ckeditor/ckeditor.js"></script>
-<!--My SCRIPT-->
-<script src="assets/js/script.js"></script>
+<!-- Gmaps file -->
+<script src="assets/libs/gmaps/gmaps.min.js"></script>
+
+<script src="assets/libs/dropify/js/dropify.min.js"></script>
+
+<!-- Magnific Popup-->
+<script src="assets/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="assets/js/pages/profile.init.js"></script>
+
+<script src="assets/js/app.js"></script>
 
 </body>
 

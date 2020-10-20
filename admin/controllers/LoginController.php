@@ -183,7 +183,7 @@ class LoginController
                     $_SESSION['success'] = 'Đổi mật khẩu thành công';
                 }else {
                     $_SESSION['error'] = 'Đổi mật khẩu thất bại';
-                }
+                }   
                 header("Location: index.php?controller=login&action=login");
                 exit();
             }
