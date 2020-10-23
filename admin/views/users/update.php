@@ -56,8 +56,8 @@
                class="form-control"/>
     </div>
     <div class="form-group">
-        <label for="status">Trạng thái</label>
-        <select name="status" class="form-control" id="status">
+        <label for="statu">Trạng thái</label>
+        <select name="status" class="form-control" id="statu">
             <?php
             $selected_active = '';
             $selected_disabled = '';
@@ -73,11 +73,11 @@
             }
             ?>
             <option value="0" <?php echo $selected_disabled; ?>>Disabled</option>
-            <option value="1" <?php echo $selected_active ?>>Active</option>
+            <option value="1" <?php echo $selected_active; ?>>Active</option>
         </select>
     </div>
     <div class="form-group">
         <input type="submit" name="submit" value="Save" class="btn btn-primary"/>
-        <a href="index.php?controller=user&action=index" class="btn btn-default">Back</a>
+        <buton class="btn btn-secondary"><a href="index.php?controller=user&action=index" >Back</a></buton>
     </div>
 </form>

@@ -128,6 +128,7 @@ class UserController extends Controller {
         $id = $_GET['id'];
         $user_model = new User();
         $user = $user_model->getById($id);
+
         if (isset($_POST['submit'])) {
 
             $first_name = $_POST['first_name'];
@@ -181,7 +182,8 @@ class UserController extends Controller {
                 $user_model->jobs = $jobs;
                 $user_model->facebook = $facebook;
                 $user_model->status = $status;
-                $is_update = $user_model->update($id);
+                $user_model->id = $id;
+                $is_update = $user_model->update();
                 if ($is_update) {
                     $_SESSION['success'] = 'Update dữ liệu thành công';
                 } else {
@@ -189,6 +191,8 @@ class UserController extends Controller {
                 }
                 header('Location: index.php?controller=user');
                 exit();
+            } elseif (isset($_POST['change'])) {
+
             }
         }
 

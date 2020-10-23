@@ -110,7 +110,7 @@ class LoginController
     /**
      *  Quên mật khẩu
      */
-    public function forgotpw() {
+    public function forGotpw() {
 //        echo "<pre>";
 //        print_r($_POST);
 //        echo "<pre>";

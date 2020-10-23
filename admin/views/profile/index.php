@@ -6,10 +6,10 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active pb-3 pt-0" data-toggle="tab" href="#profile" role="tab"><i class="fas fa-cog mr-2"></i>Profile</a>
+                <a class="nav-link active pb-3 pt-0"  href="index.php?controller=profile&action=index" role="tab"><i class="fas fa-cog mr-2"></i>Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-3 pt-0" data-toggle="tab" href="#changepassword" role="tab"><i class="fas fa-unlock mr-2"></i>Change password</a>
+                <a class="nav-link  pb-3 pt-0" href="index.php?controller=profile&action=changePassword" role="tab"><i class="fas fa-unlock mr-2"></i>Change password</a>
             </li>
         </ul>
 
@@ -20,9 +20,9 @@
                     <div class="card-body">
                         <div class="col-lg-12">
                             <div class="">
-                                <form class="form-horizontal form-material mb-0" method="post" enctype="multipart/form-data">
+                                <form class="form-horizontal form-material mb-0" method="post" enctype="multipart/form-data" action="">
                                     <div class="form-group col-md-3">
-                                        <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="assets/images/users/user-3.jpg"/>
+                                        <input type="file" id="input-file-now-custom-1" class="dropify" data-default-file="assets/images/users/user-3.jpg" name="avatar"/>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-md-6">
@@ -51,49 +51,15 @@
                                             <input type="text" placeholder="Address" id="address" name="address" class="form-control" value="">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="job">Jobs</label>
-                                            <input type="text" placeholder="Jobs" id="job" name="job" class="form-control" value="">
+                                            <label for="jobs">Jobs</label>
+                                            <input type="text" name="jobs" id="jobs"
+                                                   value=""
+                                                   class="form-control"/>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <button class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" name="submit">Update Profile</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="changepassword" role="tabpanel">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="col-lg-12">
-                            <div class="">
-                                <form class="form-horizontal form-material mb-0" method="post" enctype="multipart/form-data">
-
-                                    <div class="form-group row">
-                                        <div class="col-md-6">
-                                            <label for="password">Mật khẩu hiện tại</label>
-                                            <input type="text" placeholder="Mật khẩu hiện tại" class="form-control" name="first_name" id="first_name" value="">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group row">
-                                        <div class="col-md-6">
-                                            <label for="new_password">Mật khẩu mới</label>
-                                            <input type="text" placeholder="Mật khẩu mới" id="new_password" name="new_password" class="form-control" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-md-6">
-                                            <label for="password_confirm">Xác nhận mật khẩu mới</label>
-                                            <input type="text" placeholder="Xác nhận mật khẩu" id="password_confirm" name="password_confirm" class="form-control" value="">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" name="submit">Change password</button>
+                                        <input class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" name="submit" type="submit" value="Update profile"></input>
                                     </div>
                                 </form>
                             </div>
