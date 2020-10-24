@@ -66,8 +66,8 @@
     </div>
 
     <div class="form-group">
-        <label for="status">Trạng thái</label>
-        <select name="status" class="form-control" id="status">
+        <label for="statu">Trạng thái</label>
+        <select name="status" class="form-control" id="statu">
             <?php
             $selected_active = '';
             $selected_disabled = '';

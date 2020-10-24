@@ -22,14 +22,15 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/images/users/user-3.jpg"
+                    <img class="rounded-circle header-profile-user" src="assets/<?php echo "uploads/" . $_SESSION['user']['avatar']; ?>"
                          alt="Header Avatar">
-                    <span class="d-none d-xl-inline-block ml-1">TimeZone</span>
+                    <span class="d-none d-xl-inline-block ml-1"><?php echo $_SESSION['user']['first_name']. " " .$_SESSION['user']['last_name'];?></span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
                     <a class="dropdown-item" href="index.php?controller=profile&action=index"><i class="dripicons-user d-inlne-block text-muted mr-2"></i> Profile</a>
+                    <a class="dropdown-item" href="index.php?controller=profile&action=changePassword"><i class="dripicons-lock d-inlne-block text-muted mr-2"></i> Change Password</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="index.php?controller=user&action=logout"><i class="dripicons-exit d-inlne-block text-muted mr-2"></i>Logout</a>
                 </div>
@@ -66,11 +67,6 @@
                     <a href="index.php?controller=user&action=index">
                         <i class="fa fa-users"></i> <span class="nav-label">Users</span> </a>
                 </li>
-                <li>
-                    <a href="index.php?controller=profile&action=index">
-                        <i class="fa fa-user"></i> <span class="nav-label">Profile</span> </a>
-                </li>
-
             </ul>
         </div>
         <!-- Sidebar -->

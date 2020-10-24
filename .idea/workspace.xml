@@ -2,24 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bc6211e-2fc1-478f-90fc-d58e7c0ac9b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603161091-user-user1-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603162337-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603162573-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603162620-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603162635-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603162652-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603177517-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603177579-user-user4-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603177596-user-user1-128x128.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603297899-user-moon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/views/profile/changepassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603475624-user-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603476052-user-ninh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477175-product-lightning (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477254-product-lightning (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477283-lightning (7).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477331-news-lightning (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477411-product-lightning (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477434-product-lightning (2).jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/uploads/1603297899-user-moon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/news/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/news/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/products/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/products/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/profile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/profile/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/update.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +86,8 @@
       <workItem from="1603293297016" duration="4118000" />
       <workItem from="1603424825907" duration="678000" />
       <workItem from="1603440216837" duration="2467000" />
-      <workItem from="1603455508209" duration="4439000" />
+      <workItem from="1603455508209" duration="7623000" />
+      <workItem from="1603502883285" duration="1628000" />
     </task>
     <servers />
   </component>

@@ -20,7 +20,7 @@
     </div>
     <div class="form-group">
         <label for="phone">Phone</label>
-        <input type="number" name="phone" id="phone"
+        <input type="text" name="phone" id="phone"
                value="<?php echo isset($_POST['phone']) ? $_POST['phone'] : $user['phone'] ?>"
                class="form-control"/>
     </div>
@@ -38,10 +38,11 @@
     </div>
     <div class="form-group">
         <label for="avatar">Avatar</label>
-        <input type="file" name="avatar" id="avatar" class="form-control"/>
-        <?php if (!empty($user['avatar'])): ?>
-            <img height="80" src="assets/uploads/<?php echo $user['avatar'] ?>"/>
-        <?php endif; ?>
+        <input type="file" id="avatar" class="dropify" data-default-file="assets/uploads/<?php echo $user['avatar'] ?>" name="avatar"/>
+<!--        <input type="file" name="avatar" id="avatar" class="form-control"/>-->
+<!--        --><?php //if (!empty($user['avatar'])): ?>
+<!--            <img height="80" src="assets/uploads/--><?php //echo $user['avatar'] ?><!--"/>-->
+<!--        --><?php //endif; ?>
     </div>
     <div class="form-group">
         <label for="jobs">Jobs</label>

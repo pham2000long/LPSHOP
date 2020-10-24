@@ -72,7 +72,7 @@ require_once 'helpers/Helper.php';
                     $url_delete = "index.php?controller=product&action=delete&id=" . $product['id'];
                     ?>
                     <a title="Chi tiết" href="<?php echo $url_detail ?>"><i class="fa fa-eye"></i></a> &nbsp;&nbsp;
-                    <a title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil"></i></a> &nbsp;&nbsp;
+                    <a title="Update" href="<?php echo $url_update ?>"><i class="fa fa-pencil-alt"></i></a> &nbsp;&nbsp;
                     <a title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Are you sure delete?')"><i
                                 class="fa fa-trash"></i></a>
                 </td>
