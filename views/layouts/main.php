@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -9,7 +7,7 @@
     <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ashion | Template</title>
+    <title>LPSHOP</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -58,41 +56,12 @@
 
     <?php require_once 'header.php';?>
 
-
-<div class="main-content">
-    <div class="container">
-        <?php if (isset($_SESSION['error'])): ?>
-            <div class="alert alert-danger">
-                <?php
-                echo $_SESSION['error'];
-                unset($_SESSION['error']);
-                ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if (!empty($this->error)): ?>
-            <div class="alert alert-danger">
-                <?php
-                echo $this->error;
-                ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if (isset($_SESSION['success'])): ?>
-            <div class="alert alert-success">
-                <?php
-                echo $_SESSION['success'];
-                unset($_SESSION['success']);
-                ?>
-            </div>
-        <?php endif; ?>
-    </div>
     <!--    hiển thị nội dung động -->
     <?php echo $this->content; ?>
-</div>
 
 <?php require_once 'footer.php';?>
 
+<!-- Js Plugins -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.magnific-popup.min.js"></script>

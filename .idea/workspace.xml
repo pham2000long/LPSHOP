@@ -12,9 +12,12 @@
       <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477434-product-lightning (2).jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/assets/uploads/1603297899-user-moon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/categories/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/news/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/news/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/news/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/news/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/products/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/products/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/products/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/profile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/profile/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/update.php" afterDir="false" />
     </list>
@@ -87,7 +90,7 @@
       <workItem from="1603424825907" duration="678000" />
       <workItem from="1603440216837" duration="2467000" />
       <workItem from="1603455508209" duration="7623000" />
-      <workItem from="1603502883285" duration="1628000" />
+      <workItem from="1603502883285" duration="2009000" />
     </task>
     <servers />
   </component>
