@@ -49,7 +49,7 @@
     </div>
     <div class="form-group">
         <label for="status">Trạng thái</label>
-        <select name="status" class="form-control" id="status">
+        <select name="status" class="form-control" id="statuss">
             <?php
             $selected_active = '';
             $selected_disabled = '';

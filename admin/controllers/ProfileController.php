@@ -7,17 +7,13 @@ class ProfileController extends Controller
 {
     public function index() {
 
+//        echo "<pre>";
+//        print_r($_SESSION);
+//        echo "<pre>";
         $id = $_SESSION['user']['id'];
         $user_model = new User();
         $user = $user_model->getById($id);
 
-//        echo "<pre>";
-//        print_r($_SESSION);
-//        print_r($_POST);
-//        print_r($_FILES);
-//        print_r($user);
-//        print_r($id);
-//        echo "<pre>";
         if (isset($_POST['submit'])) {
             $first_name = $_POST['first_name'];
             $last_name = $_POST['last_name'];
@@ -69,15 +65,16 @@ class ProfileController extends Controller
                 $id = $_SESSION['user']['id'];
                 $user_model->id = $id;
                 $is_update = $user_model->update();
-//                var_dump($is_update);
                 if ($is_update) {
                     $_SESSION['success'] = 'Update profile thành công';
+                    $users = $user_model->getById($id);
+                    $_SESSION['user'] = $users;
                 } else {
                     $_SESSION['error'] = 'Update profile thất bại';
                 }
             }
-//            header('Location: index.php?controller=profile&action=index');
-//            exit();
+            header('Location: index.php?controller=profile&action=index');
+            exit();
         }
 
         $this->content = $this->render('views/profile/index.php', [
@@ -110,8 +107,11 @@ class ProfileController extends Controller
                 $is_change = $user_model->changePassword($id);
                 if ($is_change) {
                     $_SESSION['success'] = 'Đổi password  thành công';
+                    $users = $user_model->getById($id);
+                    $_SESSION['user'] = $users;
                 } else {
                     $_SESSION['error'] = 'Đổi password thất bại';
+
                 }
             }
             header('Location: index.php?controller=profile&action=index');

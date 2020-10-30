@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bc6211e-2fc1-478f-90fc-d58e7c0ac9b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603475624-user-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603476052-user-ninh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477175-product-lightning (2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477254-product-lightning (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477283-lightning (7).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477331-news-lightning (2).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477411-product-lightning (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603477434-product-lightning (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603538191-15dc26d3b4997474370782700271.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/assets/uploads/1603538201-55ea2431f914400616e330b68f132a45.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/uploads/1603297899-user-moon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/categories/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/categories/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/news/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/news/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/news/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/news/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/products/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/products/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/products/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/profile/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/profile/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/views/users/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/views/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/views/users/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,13 @@
       <workItem from="1603424825907" duration="678000" />
       <workItem from="1603440216837" duration="2467000" />
       <workItem from="1603455508209" duration="7623000" />
-      <workItem from="1603502883285" duration="2009000" />
+      <workItem from="1603502883285" duration="3806000" />
+      <workItem from="1603520632022" duration="1616000" />
+      <workItem from="1603537707391" duration="3557000" />
+      <workItem from="1603602761774" duration="3005000" />
+      <workItem from="1603671241662" duration="864000" />
+      <workItem from="1603885644153" duration="3638000" />
+      <workItem from="1603984631296" duration="652000" />
     </task>
     <servers />
   </component>
@@ -101,10 +100,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="450" y="61" key="#Deployment" timestamp="1602935884259">
+    <state x="450" y="61" key="#Deployment" timestamp="1603885842828">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="450" y="61" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1602935884259" />
+    <state x="450" y="61" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1603885842828" />
     <state x="444" y="94" key="#Options" timestamp="1602935898100">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -113,6 +112,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1602909953696" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1603539489820">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1603539489820" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1602992440764">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

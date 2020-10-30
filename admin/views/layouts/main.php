@@ -74,7 +74,7 @@
                                 echo $_GET['controller']; ?></h4>
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Time Zone</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">LP SHOP</a></li>
                                     <li class="breadcrumb-item active"><?php
                                         $_GET['controller'] = ucfirst($_GET['controller']);
                                         echo $_GET['controller']; ?></li>

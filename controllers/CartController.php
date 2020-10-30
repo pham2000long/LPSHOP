@@ -53,9 +53,9 @@ class CartController extends Controller
     public function index()
     {
         //Debug mảng $_POST
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+//        echo "<pre>";
+//        print_r($_POST);
+//        echo "</pre>";
         // Xử lý Cập nhật giỏ hàngs
         if (isset($_POST['submit'])) {
             //Xử lý thêm trường hợp nếu nhập số lượng là số âm thì sẽ
