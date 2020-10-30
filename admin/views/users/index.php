@@ -8,7 +8,7 @@
     </div>
     <div class="form-group">
         <input type="submit" value="Tìm kiếm" name="search" class="btn btn-primary"/>
-        <a href="index.php?controller=user" class="btn btn-secondary">Back</a>
+        <a href="index.php?controller=user" class="btn btn-secondary">Xoá filter</a>
     </div>
 </form>
 

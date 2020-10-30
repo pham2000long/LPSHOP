@@ -28,7 +28,7 @@ require_once 'helpers/Helper.php';
         <input type="hidden" name="controller" value="news"/>
         <input type="hidden" name="action" value="index"/>
         <input type="submit" name="search" value="Tìm kiếm" class="btn btn-primary"/>
-        <a href="index.php?controller=news" class="btn btn-default">Xóa filter</a>
+        <a href="index.php?controller=news&action=index" class="btn btn-secondary">Xóa filter</a>
     </form>
 
 
@@ -54,8 +54,8 @@ require_once 'helpers/Helper.php';
                     <td><?php echo $new['category_name'] ?></td>
                     <td><?php echo $new['title'] ?></td>
                     <td>
-                        <?php if (!empty($news['avatar'])): ?>
-                            <img height="80" src="assets/uploads/<?php echo $news['avatar'] ?>"/>
+                        <?php if (!empty($new['avatar'])): ?>
+                            <img src="assets/uploads/<?php echo $new['avatar'] ?>"  height="80"/>
                         <?php endif; ?>
                     </td>
                     <td><?php echo Helper::getStatusText($new['status']) ?></td>

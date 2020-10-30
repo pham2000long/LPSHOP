@@ -29,13 +29,12 @@
 
     <div class="form-group">
         <label>Ảnh đại diện</label>
-        <input type="file" name="avatar" class="form-control" id="category-avatar"/>
-        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
+        <input type="file" id="avatar" class="dropify" data-default-file="" name="avatar"/>
     </div>
 
     <div class="form-group">
         <label>Mô tả</label>
-        <textarea class="form-control"
+        <textarea class="form-control" id="elm1"
                   name="description"><?php echo isset($_POST['description']) ? $_POST['description'] : ''; ?></textarea>
     </div>
 
@@ -54,13 +53,13 @@
         }
       }
       ?>
-        <label>Trạng thái</label>
-        <select name="status" class="form-control">
+        <label for="statuss">Trạng thái</label>
+        <select name="status" class="form-control" id="statuss">
             <option value="0" <?php echo $selected_disabled ?> >Active</option>
             <option value="1" <?php echo $selected_active ?> >Disabled</option>
         </select>
     </div>
 
     <input type="submit" class="btn btn-primary" name="submit" value="Save"/>
-    <input type="reset" class="btn btn-secondary" name="submit" value="Reset"/>
+    <a href="index.php?controller=category&action=index" class="btn btn-secondary">Back</a>
 </form>

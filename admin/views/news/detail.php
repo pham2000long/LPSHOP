@@ -18,7 +18,7 @@ require_once 'helpers/Helper.php';
         <th>Avatar</th>
         <td>
             <?php if (!empty($news['avatar'])): ?>
-                <img height="80" src="assets/uploads/<?php echo $news['avatar'] ?>"/>
+                <img src="assets/uploads/<?php echo $news['avatar'] ?>" width="60"/>
             <?php endif; ?>
         </td>
     </tr>

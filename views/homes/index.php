@@ -7,49 +7,16 @@
                      data-setbg="assets/img/categories/category-1.jpg">
                     <div class="categories__text">
                         <h1>Women’s fashion</h1>
-                        <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
-                            edolore magna aliquapendisse ultrices gravida.</p>
                         <a href="#">Shop now</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item set-bg" data-setbg="assets/img/categories/category-2.jpg">
-                            <div class="categories__text">
-                                <h4>Men’s fashion</h4>
-                                <p>358 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item set-bg" data-setbg="assets/img/categories/category-3.jpg">
-                            <div class="categories__text">
-                                <h4>Kid’s fashion</h4>
-                                <p>273 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item set-bg" data-setbg="assets/img/categories/category-4.jpg">
-                            <div class="categories__text">
-                                <h4>Cosmetics</h4>
-                                <p>159 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                        <div class="categories__item set-bg" data-setbg="assets/img/categories/category-5.jpg">
-                            <div class="categories__text">
-                                <h4>Accessories</h4>
-                                <p>792 items</p>
-                                <a href="#">Shop now</a>
-                            </div>
-                        </div>
+            <div class="col-lg-6 p-0">
+                <div class="categories__item categories__large__item set-bg"
+                     data-setbg="assets/img/categories/category-2.jpg">
+                    <div class="categories__text">
+                        <h1>Men’s fashion</h1>
+                        <a href="#">Shop now</a>
                     </div>
                 </div>
             </div>
@@ -72,9 +39,6 @@
                     <li class="active" data-filter="*">All</li>
                     <li data-filter=".women">Women’s</li>
                     <li data-filter=".men">Men’s</li>
-                    <li data-filter=".kid">Kid’s</li>
-                    <li data-filter=".accessories">Accessories</li>
-                    <li data-filter=".cosmetic">Cosmetics</li>
                 </ul>
             </div>
         </div>
@@ -264,40 +228,6 @@
 </section>
 <!-- Product Section End -->
 
-<!-- Banner Section Begin -->
-<section class="banner set-bg" data-setbg="assets/img/banner/banner-1.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-7 col-lg-8 m-auto">
-                <div class="banner__slider owl-carousel">
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
-                        </div>
-                    </div>
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
-                        </div>
-                    </div>
-                    <div class="banner__item">
-                        <div class="banner__text">
-                            <span>The Chloe Collection</span>
-                            <h1>The Project Jacket</h1>
-                            <a href="#">Shop now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Banner Section End -->
-
 <!-- Trend Section Begin -->
 <section class="trend spad">
     <div class="container">
@@ -471,49 +401,6 @@
     </div>
 </section>
 <!-- Trend Section End -->
-
-<!-- Discount Section Begin -->
-<section class="discount">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 p-0">
-                <div class="discount__pic">
-                    <img src="assets/img/discount.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-lg-6 p-0">
-                <div class="discount__text">
-                    <div class="discount__text__title">
-                        <span>Discount</span>
-                        <h2>Summer 2019</h2>
-                        <h5><span>Sale</span> 50%</h5>
-                    </div>
-                    <div class="discount__countdown" id="countdown-time">
-                        <div class="countdown__item">
-                            <span>22</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>18</span>
-                            <p>Hour</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>46</span>
-                            <p>Min</p>
-                        </div>
-                        <div class="countdown__item">
-                            <span>05</span>
-                            <p>Sec</p>
-                        </div>
-                    </div>
-                    <a href="#">Shop now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Discount Section End -->
-
 <!-- Services Section Begin -->
 <section class="services spad">
     <div class="container">

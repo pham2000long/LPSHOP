@@ -33,19 +33,12 @@
 
         <div class="form-group">
             <label>Ảnh đại diện</label>
-            <input type="file" name="avatar" class="form-control"/>
-            <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
-        </div>
-        <?php if (!empty($category['avatar'])): ?>
-            <img src="assets/uploads/<?php echo $category['avatar']; ?>" height="50"/>
-        <?php endif; ?>
-
+            <input type="file" id="avatar" class="dropify" data-default-file="assets/uploads/<?php echo $category['avatar'] ?>" name="avatar"/>
         <div class="form-group">
             <label>Mô tả</label>
-            <textarea class="form-control"
+            <textarea class="form-control" id="elm1"
                       name="description"><?php echo isset($_POST['description']) ? $_POST['description'] : $category['description']; ?></textarea>
         </div>
-
         <div class="form-group">
             <?php
             $selected_active = '';
@@ -61,14 +54,14 @@
                 }
             }
             ?>
-            <label>Trạng thái</label>
-            <select name="status" class="form-control">
+            <label for="statuss">Trạng thái</label>
+            <select name="status" class="form-control" id="statuss">
                 <option value="0" <?php echo $selected_active ?> >Disabled</option>
                 <option value="1" <?php echo $selected_disabled ?> >Active</option>
             </select>
         </div>
 
         <input type="submit" class="btn btn-primary" name="submit" value="Save"/>
-        <input type="reset" class="btn btn-secondary" name="submit" value="Reset"/>
+        <a href="index.php?controller=category&action=index" class="btn btn-secondary">Back</a>
     </form>
 <?php endif; ?>

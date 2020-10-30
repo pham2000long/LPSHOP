@@ -28,7 +28,7 @@ require_once 'helpers/Helper.php';
     <input type="hidden" name="controller" value="product"/>
     <input type="hidden" name="action" value="index"/>
     <input type="submit" name="search" value="Tìm kiếm" class="btn btn-primary"/>
-    <a href="index.php?controller=product" class="btn btn-default">Xóa filter</a>
+    <a href="index.php?controller=product" class="btn btn-secondary">Xóa filter</a>
 </form>
 
 
