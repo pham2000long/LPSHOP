@@ -19,9 +19,11 @@ require_once 'helpers/Helper.php';
                         $selected = 'selected';
                     }
                     ?>
-                    <option value="<?php echo $category['id'] ?>" <?php echo $selected; ?>>
-                        <?php echo $category['name'] ?>
-                    </option>
+                    <?php if($category['type'] == 1) :?>
+                        <option value="<?php echo $category['id'] ?>" <?php echo $selected; ?>>
+                            <?php echo $category['name'] ?>
+                        </option>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </select>
         </div>

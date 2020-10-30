@@ -12,6 +12,7 @@ require_once 'helpers/Helper.php';
         <label for="title">Chọn danh mục</label>
         <select name="category_id" class="form-control">
             <?php foreach ($categories as $category):
+
                 //giữ trạng thái selected của category sau khi chọn dựa vào
 //                tham số category_id trên trình duyệt
                 $selected = '';
@@ -19,9 +20,11 @@ require_once 'helpers/Helper.php';
                     $selected = 'selected';
                 }
                 ?>
+                <?php if($category['type'] == 0) :?>
                 <option value="<?php echo $category['id'] ?>" <?php echo $selected; ?>>
                     <?php echo $category['name'] ?>
                 </option>
+                <?php endif; ?>
             <?php endforeach; ?>
         </select>
     </div>
