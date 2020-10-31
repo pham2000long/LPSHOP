@@ -39,10 +39,6 @@
     <div class="form-group">
         <label for="avatar">Avatar</label>
         <input type="file" id="avatar" class="dropify" data-default-file="assets/uploads/<?php echo $user['avatar'] ?>" name="avatar"/>
-<!--        <input type="file" name="avatar" id="avatar" class="form-control"/>-->
-<!--        --><?php //if (!empty($user['avatar'])): ?>
-<!--            <img height="80" src="assets/uploads/--><?php //echo $user['avatar'] ?><!--"/>-->
-<!--        --><?php //endif; ?>
     </div>
     <div class="form-group">
         <label for="jobs">Jobs</label>
@@ -57,8 +53,8 @@
                class="form-control"/>
     </div>
     <div class="form-group">
-        <label for="statu">Trạng thái</label>
-        <select name="status" class="form-control" id="statu">
+        <label for="statuss">Trạng thái</label>
+        <select name="status" class="form-control" id="statuss">
             <?php
             $selected_active = '';
             $selected_disabled = '';

@@ -20,6 +20,7 @@
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 
+
 </head>
 
 <body data-topbar="dark">
@@ -97,8 +98,6 @@
 </div>
 <!-- END layout-wrapper -->
 
-
-
 <!-- JAVASCRIPT -->
 <script src="assets/libs/jquery/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -117,6 +116,12 @@
 <script src="assets/js/pages/profile.init.js"></script>
 
 <script src="assets/js/app.js"></script>
+
+<!--tinymce js-->
+<script src="assets/libs/tinymce/tinymce.min.js"></script>
+
+<!-- init js -->
+<script src="assets/js/pages/form-editor.init.js"></script>
 
 </body>
 

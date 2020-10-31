@@ -27,11 +27,7 @@
     </div>
     <div class="form-group">
         <label for="avatar">Ảnh đại diện</label>
-        <input type="file" name="avatar" value="" class="form-control" id="avatar"/>
-        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
-      <?php if (!empty($product['avatar'])): ?>
-          <img height="80" src="assets/uploads/<?php echo $product['avatar'] ?>"/>
-      <?php endif; ?>
+        <input type="file" id="avatar" class="dropify" data-default-file="assets/uploads/<?php echo $product['avatar'] ?>" name="avatar"/>
     </div>
     <div class="form-group">
         <label for="price">Giá</label>
@@ -51,8 +47,8 @@
                   class="form-control"><?php echo isset($_POST['summary']) ? $_POST['summary'] : $product['summary'] ?></textarea>
     </div>
     <div class="form-group">
-        <label for="description">Mô tả chi tiết sản phẩm</label>
-        <textarea name="content" id="description"
+        <label>Mô tả chi tiết sản phẩm</label>
+        <textarea name="content" id="elm1"
                   class="form-control"><?php echo isset($_POST['content']) ? $_POST['content'] : $product['content'] ?></textarea>
     </div>
 
@@ -74,8 +70,8 @@
     </div>
 
     <div class="form-group">
-        <label for="status">Trạng thái</label>
-        <select name="status" class="form-control" id="status">
+        <label for="statuss">Trạng thái</label>
+        <select name="status" class="form-control" id="statuss">
           <?php
           $selected_disabled = '';
           $selected_active = '';
@@ -101,6 +97,6 @@
     </div>
     <div class="form-group">
         <input type="submit" name="submit" value="Save" class="btn btn-primary"/>
-        <a href="index.php?controller=product&action=index" class="btn btn-default">Back</a>
+        <a href="index.php?controller=product&action=index" class="btn btn-secondary">Back</a>
     </div>
 </form>

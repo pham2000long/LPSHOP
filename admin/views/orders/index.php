@@ -24,7 +24,7 @@ require_once 'helpers/Helper.php';
             <th>Address</th>
             <th>Mobie</th>
             <th>Email</th>
-            <th>Note</th>
+            <th>Status</th>
             <th>Price total</th>
             <th>Create_at</th>
             <th>Updated_at</th>
@@ -39,17 +39,15 @@ require_once 'helpers/Helper.php';
                     <td><?php echo $order['address'] ?></td>
                     <td><?php echo $order['mobile'] ?></td>
                     <td><?php echo $order['email'] ?></td>
-                    <td><?php echo $order['note'] ?></td>
+                    <td><?php echo $order['payment_status'] ?></td>
                     <td><?php echo number_format($order['price_total']) ?></td>
                     <td><?php echo date('d-m-Y H:i:s', strtotime($order['created_at'])) ?></td>
                     <td><?php echo !empty($order['updated_at']) ? date('d-m-Y H:i:s', strtotime($order['updated_at'])) : '--' ?></td>
                     <td style="text-align: center;">
                         <?php
                         $url_detail = "index.php?controller=order&action=detail&id=" . $order['id'];
-                        $url_delete = "index.php?controller=order&action=delete&id=" . $order['id'];
                         ?>
-                        <a title="Chi tiết" href="<?php echo $url_detail ?>"><i class="fa fa-eye" style="margin-right: 20px; "></i></a>
-                        <a title="Xóa" href="<?php echo $url_delete ?>" onclick="return confirm('Are you sure delete?')"><i class="fa fa-trash"></i></a>
+                        <a title="Chi tiết" href="<?php echo $url_detail ?>"><i class="fa fa-eye" ></i></a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -4,16 +4,16 @@
         <label for="category_id">Chọn danh mục</label>
         <select name="category_id" class="form-control" id="category_id">
             <?php foreach ($categories as $category):
-                    $selected = '';
-                    if (isset($_POST['category_id']) && $category['id'] == $_POST['category_id']) {
-                        $selected = 'selected';
-                    }
+                $selected = '';
+                if (isset($_POST['category_id']) && $category['id'] == $_POST['category_id']) {
+                    $selected = 'selected';
+                }
                 ?>
                 <?php if($category['type']==0): ?>
                 <option value="<?php echo $category['id']; ?>" <?php echo $selected; ?>>
                     <?php echo $category['name'] ?>
                 </option>
-                <?php endif; ?>
+            <?php endif; ?>
             <?php endforeach; ?>
         </select>
     </div>
@@ -24,8 +24,7 @@
     </div>
     <div class="form-group">
         <label for="avatar">Ảnh đại diện</label>
-        <input type="file" name="avatar" value="" class="form-control" id="avatar"/>
-        <img src="#" id="img-preview" style="display: none" width="100" height="100"/>
+        <input type="file" id="avatar" class="dropify" data-default-file=" " name="avatar"/>
     </div>
     <div class="form-group">
         <label for="price">Giá</label>
@@ -43,8 +42,8 @@
                   class="form-control"><?php echo isset($_POST['summary']) ? $_POST['summary'] : '' ?></textarea>
     </div>
     <div class="form-group">
-        <label for="description">Mô tả chi tiết sản phẩm</label>
-        <textarea name="content" id="description"
+        <label>Mô tả chi tiết sản phẩm</label>
+        <textarea name="content" id="elm1"
                   class="form-control"><?php echo isset($_POST['content']) ? $_POST['content'] : '' ?></textarea>
     </div>
 
@@ -66,8 +65,8 @@
     </div>
 
     <div class="form-group">
-        <label for="statu">Trạng thái</label>
-        <select name="status" class="form-control" id="statu">
+        <label for="status">Trạng thái</label>
+        <select name="status" class="form-control" id="status">
             <?php
             $selected_active = '';
             $selected_disabled = '';

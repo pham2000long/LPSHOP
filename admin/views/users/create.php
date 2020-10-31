@@ -37,7 +37,7 @@
     </div>
     <div class="form-group">
         <label for="avatar">Avatar</label>
-        <input type="file" name="avatar" id="avatar" class="form-control"/>
+        <input type="file" id="avatar" class="dropify" data-default-file="assets/images/users/user-1.jpg" name="avatar"/>
     </div>
     <div class="form-group">
         <label for="jobs">Jobs</label>
@@ -70,6 +70,6 @@
     </div>
     <div class="form-group">
         <input type="submit" name="submit" value="Save" class="btn btn-primary"/>
-        <a href="index.php?controller=user&action=index" class="btn btn-default">Back</a>
+        <a href="index.php?controller=user&action=index" class="btn btn-secondary">Back</a>
     </div>
 </form>

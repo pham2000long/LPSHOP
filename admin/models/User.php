@@ -24,16 +24,17 @@ class User extends Model {
         parent::__construct();
         if (isset($_GET['username']) && !empty($_GET['username'])) {
             $username = addslashes($_GET['username']);
-            $this->str_search .= " AND users.username LIKE '%$username%'";
+            $this->str_search .= " AND users.username LIKE '%$username%' ";
         }
     }
 
     public function getAll() {
         $obj_select = $this->connection
-            ->prepare("SELECT * FROM users ORDER BY updated_at DESC, created_at DESC");
+            ->prepare("SELECT * FROM users
+                WHERE TRUE $this->str_search
+                ORDER BY updated_at DESC, created_at DESC ");
         $obj_select->execute();
         $users = $obj_select->fetchAll(PDO::FETCH_ASSOC);
-
         return $users;
     }
 
@@ -42,8 +43,9 @@ class User extends Model {
         $page = $params['page'];
         $start = ($page - 1) * $limit;
         $obj_select = $this->connection
-            ->prepare("SELECT * FROM users WHERE TRUE $this->str_search
-              ORDER BY created_at DESC
+            ->prepare("SELECT * FROM users 
+                WHERE TRUE $this->str_search
+                ORDER BY created_at DESC
               LIMIT $start, $limit");
 
         $obj_select->execute();

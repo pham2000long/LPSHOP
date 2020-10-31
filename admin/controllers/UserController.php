@@ -9,7 +9,7 @@ class UserController extends Controller {
         $total = $user_model->getTotal();
         $query_additional = '';
         if (isset($_GET['username'])) {
-            $query_additional .= "&username=" . $_GET['username'];
+            $query_additional .= '&username=' . $_GET['username'];
         }
         $params = [
             'total' => $total,
@@ -17,8 +17,9 @@ class UserController extends Controller {
             'query_string' => 'page',
             'controller' => 'user',
             'action' => 'index',
-            'page' => $page,
-            'query_additional' => $query_additional
+            'full_mode' => false,
+            'query_additional' => $query_additional,
+            'page' => isset($_GET['page']) ? $_GET['page'] : 1
         ];
         $pagination = new Pagination($params);
         $pages = $pagination->getPagination();
@@ -26,7 +27,7 @@ class UserController extends Controller {
 
         $this->content = $this->render('views/users/index.php', [
             'users' => $users,
-            'pages' => $pages,
+            'pages' => $pages
         ]);
 
         require_once 'views/layouts/main.php';

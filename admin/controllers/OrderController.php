@@ -58,24 +58,4 @@ class OrderController extends Controller
         ]);
         require_once 'views/layouts/main.php';
     }
-
-    public function delete()
-    {
-        if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-            $_SESSION['error'] = 'ID không hợp lệ';
-            header('Location: index.php?controller=order');
-            exit();
-        }
-
-        $id = $_GET['id'];
-        $order_model = new Order();
-        $is_delete = $order_model->delete($id);
-        if ($is_delete) {
-            $_SESSION['success'] = 'Xóa dữ liệu thành công';
-        } else {
-            $_SESSION['error'] = 'Xóa dữ liệu thất bại';
-        }
-        header('Location: index.php?controller=order');
-        exit();
-    }
 }

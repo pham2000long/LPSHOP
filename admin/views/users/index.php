@@ -1,16 +1,18 @@
-<form method="GET" action="">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username"
-               value="<?php echo isset($_GET['username']) ? $_GET['username'] : '' ?>" class="form-control"/>
+<?php
+require_once 'helpers/Helper.php';
+?>
+    <!--form search-->
+    <form action="" method="GET">
+        <div class="form-group">
+            <label for="username">Nhập Username</label>
+            <input type="text" name="username" value="<?php echo isset($_GET['username']) ? $_GET['username'] : '' ?>" id="username"
+                   class="form-control"/>
+        </div>
         <input type="hidden" name="controller" value="user"/>
         <input type="hidden" name="action" value="index"/>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Tìm kiếm" name="search" class="btn btn-primary"/>
-        <a href="index.php?controller=user" class="btn btn-secondary">Back</a>
-    </div>
-</form>
+        <input type="submit" name="search" value="Tìm kiếm" class="btn btn-primary"/>
+        <a href="index.php?controller=user" class="btn btn-default">Xóa filter</a>
+    </form>
 
 <h2>Danh sách user</h2>
 <a href="index.php?controller=user&action=create" class="btn btn-success">
@@ -60,7 +62,11 @@
                 </td>
             </tr>
         <?php endforeach; ?>
+
     <?php else: ?>
+        <tr>
+            <td colspan="11">No data found</td>
+        </tr>
     <?php endif; ?>
 </table>
 <?php echo $pages; ?>

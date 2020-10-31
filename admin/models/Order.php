@@ -98,11 +98,4 @@ class Order extends Model
         return $obj_select->fetch(PDO::FETCH_ASSOC);
     }
 
-
-    public function delete($id)
-    {
-        $obj_delete = $this->connection
-            ->prepare("DELETE FROM orders WHERE id = $id");
-        return $obj_delete->execute();
-    }
 }
