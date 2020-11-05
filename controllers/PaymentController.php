@@ -8,9 +8,9 @@ class PaymentController extends Controller {
   public function index() {
     //Xử lý submit form
     // + Debug thông tin biến $_POST
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+//    echo "<pre>";
+//    print_r($_POST);
+//    echo "</pre>";
     // + Kiểm tra nếu user submit form thì mới xử lý
     if (isset($_POST['submit'])) {
       // + Tạo biến trung gian cho dễ thao tác
@@ -134,5 +134,9 @@ class PaymentController extends Controller {
     echo $view_online;
     // + Xóa session sau khi sử dụng
     unset($_SESSION['nganluong_info']);
+  }
+  public function thankyou() {
+      $this->render('views/payments/thank.php');
+      require_once 'views/layouts/main.php';
   }
 }

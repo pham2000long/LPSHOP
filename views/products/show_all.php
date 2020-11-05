@@ -84,20 +84,21 @@ require_once 'helpers/Helper.php';
                     <div class="service-link col-md-3 col-sm-6 col-xs-12">
                         <a href="<?php echo $product_link; ?>">
                             <img class="secondary-img img-responsive" title="<?php echo $product['title'] ?>"
-                                 src="../backend/assets/uploads/<?php echo $product['avatar'] ?>"
+                                 src="../admin/assets/uploads/<?php echo $product['avatar'] ?>"
                                  alt="<?php echo $product['title'] ?>"/>
-                            <span class="shop-title">
+                            <span class="shop-title" style="text-align: center;">
                         <?php echo $product['title'] ?>
                     </span>
                         </a>
+                        <br>
                         <span class="shop-price">
-                            <?php echo number_format($product['price']) ?>
+                           $ <?php echo number_format($product['price']) ?>
                 </span>
-
+                        <br>
                         <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">
-                        <a href="<?php echo $product_cart_add ?>" style="color: inherit">Thêm vào giỏ</a>
+                        <a href="<?php echo $product_cart_add ?>"  class="btn btn-success">Thêm vào giỏ</a>
                     </span>
-                    </div>
+                        </div>
                 <?php endforeach; ?>
 
 <!--                --><?php //echo $pagination; ?>

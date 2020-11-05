@@ -26,7 +26,7 @@ require_once 'helpers/Helper.php';
                              mục frontend và backend nên cần lên 1 cấp để có
                              thể vào backend lấy ảnh ra-->
                             <img class="product-avatar img-responsive"
-                                 src="../backend/assets/uploads/<?php echo $cart['avatar']?>"
+                                 src="admin/assets/uploads/<?php echo $cart['avatar']?>"
                                  width="80">
                             <div class="content-product">
                                 <?php

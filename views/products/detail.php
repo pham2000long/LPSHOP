@@ -6,7 +6,7 @@
         <div class="detail-content-wrap con-md-8 col-sm-8 col-xs-12">
             <div class="product-info-wrap">
                 <div class="product-image-info">
-                    <img src="../backend/assets/uploads/<?php echo $product['avatar'] ?>" width="260"
+                    <img src="../admin/assets/uploads/<?php echo $product['avatar'] ?>" width="260"
                          title="<?php echo $product['title']; ?>">
                 </div>
                 <div class="product-info">

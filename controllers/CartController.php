@@ -44,9 +44,9 @@ class CartController extends Controller
                 $_SESSION['cart'][$product_id] = $cart;
             }
         }
-        echo "<pre>";
-        print_r($_SESSION['cart']);
-        echo "</pre>";
+//        echo "<pre>";
+//        print_r($_SESSION['cart']);
+//        echo "</pre>";
     }
 
     //Phương thức liệt kê sản phẩm trong giỏ - Giỏ hàng của bạn
@@ -84,9 +84,9 @@ class CartController extends Controller
 
     //Phương thức xóa sản phẩm khỏi Giỏ
     public function delete() {
-        echo "<pre>";
-        print_r($_GET);
-        echo "</pre>";
+//        echo "<pre>";
+//        print_r($_GET);
+//        echo "</pre>";
         //Do trong rewrite đã có regex bắt buộc id phải là số, nên ko
         //cần validate bằng PHP nữa
         $product_id = $_GET['id'];

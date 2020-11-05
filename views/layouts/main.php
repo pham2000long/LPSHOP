@@ -1,13 +1,22 @@
+<?php require_once 'Helpers/Helper.php'; ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
+    <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>" />
     <meta charset="UTF-8">
-    <meta name="description" content="Ashion Template">
-    <meta name="keywords" content="Ashion, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LPSHOP</title>
+    <link rel="canonical" href="http://localhost"/>
+    <link rel="alternate" href="http://localhost" hreflang="vi-vn"/>
+
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="author" content="http://localhost">    <meta name="copyright" content="http://localhost"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="LPSHOP"/>
+    <meta property="og:url" content="http://localhost"/>
+    <meta property="og:site_name" content="http://localhost"/>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -55,23 +64,37 @@
 </div>
 
     <?php require_once 'header.php';?>
+<div class="container">
+    <?php if (isset($_SESSION['error'])): ?>
+        <div class="alert alert-danger">
+            <?php
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+            ?>
+        </div>
+    <?php endif; ?>
 
+    <?php if (!empty($this->error)): ?>
+        <div class="alert alert-danger">
+            <?php
+            echo $this->error;
+            ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (isset($_SESSION['success'])): ?>
+        <div class="alert alert-success">
+            <?php
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+            ?>
+        </div>
+    <?php endif; ?>
+</div>
     <!--    hiển thị nội dung động -->
     <?php echo $this->content; ?>
 
 <?php require_once 'footer.php';?>
 
-<!-- Js Plugins -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/mixitup.min.js"></script>
-<script src="assets/js/jquery.countdown.min.js"></script>
-<script src="assets/js/jquery.slicknav.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.nicescroll.min.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
 
 </html>
