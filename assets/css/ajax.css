@@ -1421,7 +1421,7 @@ a.learn-more {
 .ajax-message {
     position: fixed;
     right: 12px;
-    top: 35px;
+    top: 75px;
     z-index: 10000000;
     border: 1px solid #21431ecc;
     color: #21431ecc;

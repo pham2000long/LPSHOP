@@ -64,6 +64,7 @@
                         <i class="fa fa-book"></i> <span class="nav-label">Quản lý tin tức</span> </a>
                 </li>
                 <li>
+
                     <a href="index.php?controller=order&action=index">
                         <i class="fa fa-shopping-cart"></i> <span class="nav-label">Orders</span> </a>
                 </li>
