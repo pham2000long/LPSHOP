@@ -56,54 +56,6 @@
                                 </span>
                     </a>
                 </li>
-                <li>
-                    <a href='product_detail.html' class="news-relative-link">
-                                <span class="news-relative-img">
-                                <img src="assets/images/samsung-galaxy-note-10-plus-silver-400x460.png"
-                                     alt="no-image" title="SamSung Note 10"
-                                     class="detail-relative-img"/>
-                                </span>
-                        <span class="detail-relative-content">
-                                    SamSung Note 10
-                            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href='product_detail.html' class="news-relative-link">
-                                <span class="news-relative-img">
-                                <img src="assets/images/samsung-galaxy-note-10-plus-silver-400x460.png"
-                                     alt="no-image" title="SamSung Note 10"
-                                     class="detail-relative-img"/>
-                                </span>
-                        <span class="detail-relative-content">
-                                    SamSung Note 10
-                            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href='product_detail.html' class="news-relative-link">
-                                <span class="news-relative-img">
-                                <img src="assets/images/samsung-galaxy-note-10-plus-silver-400x460.png"
-                                     alt="no-image" title="SamSung Note 10"
-                                     class="detail-relative-img"/>
-                                </span>
-                        <span class="detail-relative-content">
-                                    SamSung Note 10
-                            </span>
-                    </a>
-                </li>
-                <li>
-                    <a href='product_detail.html' class="news-relative-link">
-                                <span class="news-relative-img">
-                                <img src="assets/images/samsung-galaxy-note-10-plus-silver-400x460.png"
-                                     alt="no-image" title="SamSung Note 10"
-                                     class="detail-relative-img"/>
-                                </span>
-                        <span class="detail-relative-content">
-                                    SamSung Note 10
-                            </span>
-                    </a>
-                </li>
             </ul>
         </div>
     </div>

@@ -8,9 +8,9 @@ class CartController extends Controller
     public function add()
     {
         //Debug biến $_GET để xem thông tin
-//    echo "<pre>";
-//    print_r($_GET);
-//    echo "</pre>";
+    echo "<pre>";
+    print_r($_GET);
+    echo "</pre>";
         $product_id = $_GET['product_id'];
         // Gọi model để lấy ra thông tin sản phẩm theo id trên
         $product_model = new Product();
@@ -44,9 +44,9 @@ class CartController extends Controller
                 $_SESSION['cart'][$product_id] = $cart;
             }
         }
-//        echo "<pre>";
-//        print_r($_SESSION['cart']);
-//        echo "</pre>";
+        echo "<pre>";
+        print_r($_SESSION['cart']);
+        echo "</pre>";
     }
 
     //Phương thức liệt kê sản phẩm trong giỏ - Giỏ hàng của bạn

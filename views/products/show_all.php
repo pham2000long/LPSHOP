@@ -96,7 +96,8 @@ require_once 'helpers/Helper.php';
                 </span>
                         <br>
                         <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">
-                        <a href="<?php echo $product_cart_add ?>"  class="btn btn-success">Thêm vào giỏ</a>
+                        <a href="<?php echo $product_cart_add ?>"
+                        style="color: white">Thêm vào giỏ</a>
                     </span>
                         </div>
                 <?php endforeach; ?>

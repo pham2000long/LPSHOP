@@ -55,7 +55,7 @@ class LoginController
                     $_SESSION['success'] = 'Đăng nhập thành công';
                     //tạo session user để xác định user nào đang login
                     $_SESSION['user'] = $user;
-                    header("Location: index.php?controller=product");
+                    header("Location: index.php?controller=category");
                     exit();
                 }
             }

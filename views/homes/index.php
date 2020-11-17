@@ -57,13 +57,19 @@
                         <ul class="product__hover">
                             <li><a href="../admin/assets/uploads/<?php echo $product['avatar'] ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#" data-id="<?php echo $product['id']; ?>"><span class="icon_heart_alt" data-id="<?php echo $product['id']; ?>"></span></a></li>
-                            <li><a href="#"><span class="add-to-cart" data-id="<?php echo $product['id']; ?>"><i class="fas fa-shopping-bag"></i></a></li>
                         </ul>
                     </div>
                     <div class="product__item__text">
                         <h6><a href="#"><?php echo $product['title'] ?></a></h6>
                         <div class="product__price">$ <?php echo number_format($product['price']) ?></div>
+
+                            <span class="add-to-cart"
+                                  data-id="<?php echo $product['id']; ?>">
+                                <a href="#" style="color: white">Thêm vào giỏ</a>
+                            </span>
+
                     </div>
+
                 </div>
             </div>
             <?php endforeach; ?>
