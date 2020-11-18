@@ -10,6 +10,8 @@ class Helper
     const STATUS_DISABLED = 0;
     const STATUS_ACTIVE_TEXT = 'Active';
     const STATUS_DISABLED_TEXT = 'Disabled';
+    const PAYMENT_STATUS_UNPAID_TEXT = 'Chưa thanh toán';
+    const PAYMENT_STATUS_PAID_TEXT = 'Đã thanh toán';
 
     /**
      * Get status text
@@ -25,6 +27,19 @@ class Helper
                 break;
             case self::STATUS_DISABLED:
                 $status_text = self::STATUS_DISABLED_TEXT;
+                break;
+        }
+        return $status_text;
+    }
+    public static function getPayMentStatusText($status = 0)
+    {
+        $status_text = '';
+        switch ($status) {
+            case self::STATUS_ACTIVE:
+                $status_text = self::PAYMENT_STATUS_PAID_TEXT;
+                break;
+            case self::STATUS_DISABLED:
+                $status_text = self::PAYMENT_STATUS_UNPAID_TEXT;
                 break;
         }
         return $status_text;
