@@ -7,11 +7,15 @@ require_once 'helpers/Helper.php';
 <div class="container">
     <div class="row">
         <div class="main-left col-md-3 col-sm-3 col-xs-12">
-            <h3>Lọc</h3>
+            <h3>Search and Filter</h3>
             <form action="" method="POST">
+                <div class="form-group">
+                    <b>Search</b> <br>
+                    <input type="text" name="name">
+                </div>
               <?php if (!empty($categories)): ?>
                   <div class="form-group">
-                      <b>Danh mục</b> <br/>
+                      <b>Category</b> <br/>
                     <?php foreach ($categories AS $category):
                       //đổ lại dữ liệu đã check category
                       $category_checked = '';
@@ -31,7 +35,7 @@ require_once 'helpers/Helper.php';
               <?php endif; ?>
 
                 <div class="form-group">
-                    <b>Khoảng giá</b> <br/>
+                    <b>Price</b> <br/>
                   <?php
                   //cần đổ lại dữ liệu ra form search
                   $price1_checked = '';
@@ -66,12 +70,12 @@ require_once 'helpers/Helper.php';
                 </div>
                 <div class="form-group">
                     <input type="submit" name="filter" value="Filter" class="btn btn-primary"/>
-                    <a href="danh-sach-san-pham.html" class="btn btn-default">Xóa filter</a>
+                    <a href="danh-sach-san-pham.html" class="btn btn-secondary">Clear</a>
                 </div>
             </form>
         </div>
         <div class="main-right col-md-9 col-sm-9 col-xs-12">
-            <h2>Danh sách sản phẩm</h2>
+            <h2>Products</h2>
           <?php if (!empty($products)): ?>
               <h1 class="post-list-title">
               </h1>

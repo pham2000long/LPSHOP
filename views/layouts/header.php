@@ -16,7 +16,7 @@
                         <li><a href="women.html">Women’s</a></li>
                         <li><a href="men.html">Men’s</a></li>
                         <li><a href="danh-sach-san-pham.html">Shop</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./new.html">New</a></li>
                         <li><a href="./contact.html">Contact</a></li>
                     </ul>
                 </nav>

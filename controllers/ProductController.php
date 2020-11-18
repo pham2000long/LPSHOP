@@ -8,6 +8,7 @@ class ProductController extends Controller {
     $params = [];
     //nếu user có hành động filter
     if (isset($_POST['filter'])) {
+        if (isset($_POST['']))
       if (isset($_POST['category'])) {
         $category = implode(',', $_POST['category']);
         //chuyển thành chuỗi sau để sử dụng câu lệnh in_array

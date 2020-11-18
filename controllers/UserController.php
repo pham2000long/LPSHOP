@@ -36,7 +36,7 @@ class UserController extends Controller {
 
     public function update() {
         if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-            header("Location: index.php?controller=user");
+            header("Location: index.php");
             exit();
         }
 
@@ -100,9 +100,9 @@ class UserController extends Controller {
                 $user_model->id = $id;
                 $is_update = $user_model->update();
                 if ($is_update) {
-                    $_SESSION['success'] = 'Update dữ liệu thành công';
+                    $_SESSION['success'] = 'Update success';
                 } else {
-                    $_SESSION['error'] = 'Update dữ liệu thất bại';
+                    $_SESSION['error'] = 'Update fail';
                 }
                 header('Location: index.php?controller=user');
                 exit();
@@ -112,24 +112,6 @@ class UserController extends Controller {
         }
 
         $this->content = $this->render('views/users/update.php', [
-            'user' => $user
-        ]);
-
-        require_once 'views/layouts/main.php';
-    }
-
-
-
-    public function detail() {
-        if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-            header("Location: index.php?controller=user");
-            exit();
-        }
-        $id = $_GET['id'];
-        $user_model = new User();
-        $user = $user_model->getById($id);
-
-        $this->content = $this->render('views/users/detail.php', [
             'user' => $user
         ]);
 
@@ -204,7 +186,7 @@ class UserController extends Controller {
                 } else {
                     $_SESSION['error'] = 'Đăng ký thất bại';
                 }
-                header('Location: index.php?controller=login&action=login');
+                header('Location: index.php?controller=user&action=login');
                 exit();
             }
         }
@@ -251,12 +233,12 @@ class UserController extends Controller {
                 } else {
                     $_SESSION['error'] = 'Hệ thống có lỗi, vui lòng chờ';
                 }
-                header('Location: index.php?controller=login&action=login');
+                header('Location: index.php?controller=user&action=login');
                 exit();
             }
         }
         $this->content = $this->render('views/users/forgotpw.php');
-        require_once 'views/layouts/main_login.php';
+        require_once 'views/layouts/main.php';
     }
     public function resetPassword() {
 //        echo "<pre>";
@@ -264,7 +246,7 @@ class UserController extends Controller {
 //        print_r($_POST);
 //        echo "<pre>";
         if (!isset($_GET['token'])){
-            header("Location: index.php?controller=login&action=login");
+            header("Location: index.php?controller=user&action=login");
             exit();
         }
         if (isset($_POST['submit'])) {
@@ -286,9 +268,9 @@ class UserController extends Controller {
                 $user_model->password = md5($password);
                 $is_change = $user_model->changePassword($id);
                 if ($is_change){
-                    $_SESSION['success'] = 'Đổi mật khẩu thành công';
+                    $_SESSION['success'] = 'Password change success';
                 }else {
-                    $_SESSION['error'] = 'Đổi mật khẩu thất bại';
+                    $_SESSION['error'] = 'Password change failed';
                 }
                 header("Location: index.php?controller=login&action=login");
                 exit();
@@ -303,8 +285,8 @@ class UserController extends Controller {
         $_SESSION = [];
 //        session_destroy();
         unset($_SESSION['user']);
-        $_SESSION['success'] = 'Logout thành công';
-        header('Location: index.php?controller=login&action=login');
+        $_SESSION['success'] = 'Logout success';
+        header('Location: index.php');
         exit();
     }
 }

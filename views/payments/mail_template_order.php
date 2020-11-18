@@ -76,7 +76,7 @@
                          <?php echo $cart['quantity']; ?>
                 </td>
                 <td>
-                    <?php echo number_format($cart['price']); ?> VNĐ
+                    $<?php echo number_format($cart['price']); ?>
                 </td>
                 <td>
                     $ <?php

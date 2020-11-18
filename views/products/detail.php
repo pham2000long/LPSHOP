@@ -14,7 +14,7 @@
                       <?php echo $product['title']; ?>
                     </h3>
                     <div class="product-price">
-                      <?php echo number_format($product['price'], 0, '.', ','); ?>₫
+                      $<?php echo number_format($product['price'], 0, '.', ','); ?>
                     </div>
                     <div class="product-cart">
                         <span data-id="<?php echo $product['id']; ?>" class="add-to-cart">
@@ -36,13 +36,13 @@
                 </div>
             </div>
             <div class="detail-comment">
-                <h2 class="link-category-item">Bình luận</h2>
+                <h2 class="link-category-item">Comments</h2>
                 <div class="fb-comments" data-href="https://sukien.net" data-width="100%"
                      data-numposts="5"></div>
             </div>
         </div>
         <div class="news-relative-wrap col-md-4 col-sm-4 col-xs-12">
-            <h4 class="link-category-item">Sản phẩm khác</h4>
+            <h4 class="link-category-item">Products related to this item</h4>
             <ul class="news-relative">
                 <li>
                     <a href='product_detail.html' class="news-relative-link">
