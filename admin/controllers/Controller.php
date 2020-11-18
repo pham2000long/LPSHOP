@@ -15,6 +15,19 @@ class Controller
             header('Location: index.php?controller=login&action=login');
             exit();
         }
+        else if (isset($_SESSION['user']['roles'])) {
+            // Ngược lại nếu đã đăng nhập
+            $permission = $_SESSION['user']['roles'];
+            // Kiểm tra quyền của người đó có phải là admin hay không
+            if ($permission == 0) {
+                // Nếu không phải admin thì xuất thông báo
+                echo "Bạn không đủ quyền truy cập vào trang này<br>";
+                echo "<a href='http://lpshop.test'> Click để quay lại</a>";
+                unset($_SESSION['user']);
+                unset($_SESSION['success']);
+                exit();
+            }
+        }
     }
 
     //chứa nội dung view

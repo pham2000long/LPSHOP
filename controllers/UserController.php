@@ -180,6 +180,7 @@ class UserController extends Controller {
                 //do đang sử dụng cơ chế mã hóa này cho quy trình login
                 $user_model->password = md5($password);
                 $user_model->status = 1;
+                $user_model->roles = 0;
                 $is_insert = $user_model->insertRegister();
                 if ($is_insert) {
                     $_SESSION['success'] = 'Đăng ký thành công';

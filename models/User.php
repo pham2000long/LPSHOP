@@ -16,6 +16,7 @@ class User extends Model {
     public $status;
     public $created_at;
     public $updated_at;
+    public $roles;
     public $token;
 
     public $str_search;
@@ -79,12 +80,13 @@ class User extends Model {
 
     public function insertRegister() {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO users(username, password, status)
-VALUES(:username, :password, :status)");
+            ->prepare("INSERT INTO users(username, password, status, roles)
+VALUES(:username, :password, :status, :roles)");
         $arr_insert = [
             ':username' => $this->username,
             ':password' => $this->password,
             ':status' => $this->status,
+            ':roles' => $this->roles,
         ];
         return $obj_insert->execute($arr_insert);
     }
