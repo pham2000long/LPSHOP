@@ -69,6 +69,32 @@
         </select>
     </div>
     <div class="form-group">
+        <label for="roles">Permission</label>
+        <select name="roles" class="form-control" id="roles">
+            <?php
+            $selected_admin = '';
+            $selected_editor = '';
+            $selected_sale = '';
+            if (isset($_POST['roles'])) {
+                switch ($_POST['roles']) {
+                    case 1:
+                        $selected_admin = 'selected';
+                        break;
+                    case 2:
+                        $selected_editor = 'selected';
+                        break;
+                    case 3:
+                        $selected_sale = 'selected';
+                        break;
+                }
+            }
+            ?>
+            <option value="1" <?php echo $selected_admin; ?>>Admin</option>
+            <option value="2" <?php echo $selected_editor ?>>Editor</option>
+            <option value="3" <?php echo $selected_sale ?>>Sale</option>
+        </select>
+    </div>
+    <div class="form-group">
         <input type="submit" name="submit" value="Save" class="btn btn-primary"/>
         <a href="index.php?controller=user&action=index" class="btn btn-secondary">Back</a>
     </div>

@@ -12,6 +12,14 @@ class Helper
     const STATUS_DISABLED_TEXT = 'Disabled';
     const PAYMENT_STATUS_UNPAID_TEXT = 'Chưa thanh toán';
     const PAYMENT_STATUS_PAID_TEXT = 'Đã thanh toán';
+    const Role_User = 0;
+    const Role_Admin = 1;
+    const Role_Editor = 2;
+    const Role_Sale= 3;
+    const Role_User_Text = 'User';
+    const Role_Admin_Text = 'Admin';
+    const Role_Editor_Text = 'Editor';
+    const Role_Sale_Text = 'Sale';
 
     /**
      * Get status text
@@ -31,20 +39,38 @@ class Helper
         }
         return $status_text;
     }
-    public static function getPayMentStatusText($status = 0)
+    public static function getPayMentStatusText($payment_status = 0)
     {
-        $status_text = '';
-        switch ($status) {
+        $payment_status_text = '';
+        switch ($payment_status) {
             case self::STATUS_ACTIVE:
-                $status_text = self::PAYMENT_STATUS_PAID_TEXT;
+                $payment_status_text = self::PAYMENT_STATUS_PAID_TEXT;
                 break;
             case self::STATUS_DISABLED:
-                $status_text = self::PAYMENT_STATUS_UNPAID_TEXT;
+                $payment_status_text = self::PAYMENT_STATUS_UNPAID_TEXT;
                 break;
         }
-        return $status_text;
+        return $payment_status_text;
     }
-
+    public static function getRoleText($role = 0)
+    {
+        $role_text = '';
+        switch ($role) {
+            case self::Role_User:
+                $role_text = self::Role_User_Text;
+                break;
+            case self::Role_Admin:
+                $role_text = self::Role_Admin_Text;
+                break;
+            case self::Role_Editor:
+                $role_text = self::Role_Editor_Text;
+                break;
+            case self::Role_Sale:
+                $role_text = self::Role_Sale_Text;
+                break;
+        }
+        return $role_text;
+    }
     /**
      * Chuyển đổi chuỗi ký tự có dấu thành chuỗi ký tự không dấu, ngăn cách  nhau bởi ký tự -
      * @param $str

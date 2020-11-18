@@ -123,4 +123,13 @@ class ProfileController extends Controller
 
         require_once 'views/layouts/main.php';
     }
+    public function logout() {
+//        session_destroy();
+        $_SESSION = [];
+//        session_destroy();
+        unset($_SESSION['user']);
+        $_SESSION['success'] = 'Logout thành công';
+        header('Location: index.php?controller=login&action=login');
+        exit();
+    }
 }

@@ -32,7 +32,7 @@
                     <a class="dropdown-item" href="index.php?controller=profile&action=index"><i class="dripicons-user d-inlne-block text-muted mr-2"></i> Profile</a>
                     <a class="dropdown-item" href="index.php?controller=profile&action=changePassword"><i class="dripicons-lock d-inlne-block text-muted mr-2"></i> Change Password</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.php?controller=user&action=logout"><i class="dripicons-exit d-inlne-block text-muted mr-2"></i>Logout</a>
+                    <a class="dropdown-item" href="index.php?controller=profile&action=logout"><i class="dripicons-exit d-inlne-block text-muted mr-2"></i>Logout</a>
                 </div>
             </div>
 

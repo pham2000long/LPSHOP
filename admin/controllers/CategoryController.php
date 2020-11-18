@@ -5,8 +5,7 @@ require_once 'models/Pagination.php';
 
 class CategoryController extends Controller
 {
-
-  public function index()
+    public function index()
   {
     //hiển thị danh sách category
     $category_model = new Category();

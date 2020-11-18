@@ -53,8 +53,8 @@
                class="form-control"/>
     </div>
     <div class="form-group">
-        <label for="statuss">Trạng thái</label>
-        <select name="status" class="form-control" id="statuss">
+        <label for="status">Trạng thái</label>
+        <select name="status" class="form-control">
             <?php
             $selected_active = '';
             $selected_disabled = '';
@@ -71,6 +71,37 @@
             ?>
             <option value="0" <?php echo $selected_disabled; ?>>Disabled</option>
             <option value="1" <?php echo $selected_active; ?>>Active</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="roles">Permission</label>
+        <select name="roles" class="form-control">
+            <?php
+            $selected_user = '';
+            $selected_admin = '';
+            $selected_editor = '';
+            $selected_sale = '';
+            if (isset($_POST['roles'])) {
+                switch ($_POST['roles']) {
+                    case 0:
+                        $selected_user = 'selected';
+                        break;
+                    case 1:
+                        $selected_admin = 'selected';
+                        break;
+                    case 2:
+                        $selected_editor = 'selected';
+                        break;
+                    case 3:
+                        $selected_sale = 'selected';
+                        break;
+                }
+            }
+            ?>
+            <option value="0" <?php echo $selected_user; ?>>User</option>
+            <option value="1" <?php echo $selected_admin; ?>>Admin</option>
+            <option value="2" <?php echo $selected_editor; ?>>Editor</option>
+            <option value="3" <?php echo $selected_sale; ?>>Sale</option>
         </select>
     </div>
     <div class="form-group">

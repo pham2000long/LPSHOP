@@ -16,6 +16,7 @@ class User extends Model {
     public $status;
     public $created_at;
     public $updated_at;
+    public $roles;
     public $token;
 
     public $str_search;
@@ -77,8 +78,8 @@ class User extends Model {
 
     public function insert() {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO users(username, password, first_name, last_name, phone, address, email, avatar, jobs, facebook, status)
-VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, :avatar, :jobs, :facebook, :status)");
+            ->prepare("INSERT INTO users(username, password, first_name, last_name, phone, address, email, avatar, jobs, facebook, status, roles)
+VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, :avatar, :jobs, :facebook, :status, :roles)");
         $arr_insert = [
             ':username' => $this->username,
             ':password' => $this->password,
@@ -91,6 +92,7 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
             ':jobs' => $this->jobs,
             ':facebook' => $this->facebook,
             ':status' => $this->status,
+            ':roles' => $this->roles,
         ];
         return $obj_insert->execute($arr_insert);
     }
@@ -98,7 +100,7 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
     public function update() {
         $obj_update = $this->connection
             ->prepare("UPDATE users SET first_name=:first_name, last_name=:last_name, phone=:phone, 
-            address=:address, email=:email, avatar=:avatar, jobs=:jobs, facebook=:facebook, status=:status, updated_at=:updated_at
+            address=:address, email=:email, avatar=:avatar, jobs=:jobs, facebook=:facebook, status=:status, updated_at=:updated_at, roles=:roles 
              WHERE id = :id");
         $arr_update = [
             ':first_name' => $this->first_name,
@@ -111,6 +113,7 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
             ':facebook' => $this->facebook,
             ':status' => $this->status,
             ':updated_at' => $this->updated_at,
+            ':roles' => $this->roles,
             ':id' => $this->id
         ];
         $obj_update->execute($arr_update);

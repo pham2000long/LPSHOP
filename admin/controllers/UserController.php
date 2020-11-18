@@ -3,6 +3,21 @@ require_once 'controllers/Controller.php';
 require_once 'models/User.php';
 require_once 'models/Pagination.php';
 class UserController extends Controller {
+    public function __construct()
+    {
+        if (isset($_SESSION['user']['roles'])) {
+            // Ngược lại nếu đã đăng nhập
+            $permission = $_SESSION['user']['roles'];
+            // Kiểm tra quyền của người đó có phải là admin hay không
+            if ($permission != '1') {
+                // Nếu không phải admin thì xuất thông báo
+                echo "Bạn không đủ quyền truy cập vào trang này<br>";
+                echo "<a href='http://lpshop.test/admin/index.php?controller=category&action=index'> Click để quay lại</a>";
+                exit();
+            }
+        }
+    }
+
     public function index() {
         $user_model = new User();
         $page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -47,6 +62,7 @@ class UserController extends Controller {
             $jobs = $_POST['jobs'];
             $facebook = $_POST['facebook'];
             $status = $_POST['status'];
+            $roles = $_POST['roles'];
             //xử lý validate
             if (empty($username)) {
                 $this->error = 'Username không được để trống';
@@ -104,6 +120,7 @@ class UserController extends Controller {
                 $user_model->jobs = $jobs;
                 $user_model->facebook = $facebook;
                 $user_model->status = $status;
+                $user_model->roles = $roles;
                 $is_insert = $user_model->insert();
                 if ($is_insert) {
                     $_SESSION['success'] = 'Insert dữ liệu thành công';
@@ -140,6 +157,7 @@ class UserController extends Controller {
             $jobs = $_POST['jobs'];
             $facebook = $_POST['facebook'];
             $status = $_POST['status'];
+            $roles = $_POST['roles'];
             //xử lý validate
             if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $this->error = 'Email không đúng định dạng';
@@ -183,7 +201,9 @@ class UserController extends Controller {
                 $user_model->jobs = $jobs;
                 $user_model->facebook = $facebook;
                 $user_model->status = $status;
+                $user_model->roles = $roles;
                 $user_model->id = $id;
+
                 $is_update = $user_model->update();
                 if ($is_update) {
                     $_SESSION['success'] = 'Update dữ liệu thành công';
@@ -239,13 +259,5 @@ class UserController extends Controller {
         require_once 'views/layouts/main.php';
     }
 
-    public function logout() {
-//        session_destroy();
-        $_SESSION = [];
-//        session_destroy();
-        unset($_SESSION['user']);
-        $_SESSION['success'] = 'Logout thành công';
-        header('Location: index.php?controller=login&action=login');
-        exit();
-    }
+
 }

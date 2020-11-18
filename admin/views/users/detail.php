@@ -52,6 +52,10 @@ require_once 'helpers/Helper.php';
         <td><?php echo Helper::getStatusText($user['status']); ?></td>
     </tr>
     <tr>
+        <th>Permission</th>
+        <td><?php echo Helper::getRoleText($user['roles']); ?></td>
+    </tr>
+    <tr>
         <th>created_at</th>
         <td><?php echo date('d-m-Y H:i:s', strtotime($user['created_at'])) ?></td>
     </tr>
