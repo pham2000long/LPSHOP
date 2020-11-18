@@ -98,7 +98,16 @@ class Order extends Model
         return $obj_select->fetch(PDO::FETCH_ASSOC);
     }
 
-
+    public function update($id)
+    {
+        $obj_update = $this->connection
+            ->prepare("UPDATE orders SET payment_status=:status, updated_at=:updated_at WHERE id = $id");
+        $arr_update = [
+            ':status' => $this->status,
+            ':updated_at' => $this->updated_at
+        ];
+        return $obj_update->execute($arr_update);
+    }
 
     public function delete($id)
     {

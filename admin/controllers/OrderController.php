@@ -58,6 +58,39 @@ class OrderController extends Controller
         ]);
         require_once 'views/layouts/main.php';
     }
+    public function update()
+    {
+        if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
+            $_SESSION['error'] = 'ID không hợp lệ';
+            header('Location: index.php?controller=orders');
+            exit();
+        }
+        $id = $_GET['id'];
+        $orders_model = new Order();
+        $orders = $orders_model->getById($id);
+        //xử lý submit form
+        if (isset($_POST['submit'])) {
+
+            $status = $_POST['status'];
+
+            $orders_model->status = $status;
+            $orders_model->updated_at = date('Y-m-d H:i:s');
+
+            $is_update = $orders_model->update($id);
+
+            if ($is_update) {
+                $_SESSION['success'] = 'Update trạng thái thành công';
+            } else {
+                $_SESSION['error'] = 'Update trạng thái thất bại';
+            }
+            header('Location: index.php?controller=order');
+            exit();
+        }
+        $this->content = $this->render('views/orders/update.php', [
+            'orders' => $orders
+        ]);
+        require_once 'views/layouts/main.php';
+    }
 
     public function delete()
     {
