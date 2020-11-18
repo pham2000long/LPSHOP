@@ -58,13 +58,13 @@ require_once 'helpers/Helper.php';
                         }
                     }
                     ?>
-                    <input <?php echo $checked_1 ?> type="checkbox" name="prices[]" value="0"> < 1tr
+                    <input <?php echo $checked_1 ?> type="checkbox" name="prices[]" value="0"> Down to $50
                     <br>
-                    <input <?php echo $checked_2 ?> type="checkbox" name="prices[]" value="1"> < Từ 1tr đến 2tr
+                    <input <?php echo $checked_2 ?> type="checkbox" name="prices[]" value="1"> From $50 To $55
                     <br>
-                    <input <?php echo $checked_3 ?> type="checkbox" name="prices[]" value="2"> < Từ 2tr đến 3tr
+                    <input <?php echo $checked_3 ?> type="checkbox" name="prices[]" value="2"> From $55 To $60
                     <br>
-                    <input <?php echo $checked_4 ?> type="checkbox" name="prices[]" value="3"> < Từ 3tr đến 4tr
+                    <input <?php echo $checked_4 ?> type="checkbox" name="prices[]" value="3"> Up to $60
                     <br>
                 </div>
                 <input type="submit" name="filter" value="Tìm kiếm" class="btn btn-success">
@@ -76,7 +76,7 @@ require_once 'helpers/Helper.php';
         <div class="col-md-9 col-sm-9 col-12">
             <?php if (!empty($products)): ?>
                 <h1 class="post-list-title">
-                    <a href="danh-sach-san-pham.html" class="link-category-item">Sản phẩm mới nhất</a>
+
                 </h1>
                 <div class="link-secondary-wrap row">
                     <?php foreach ($products AS $product):
@@ -99,7 +99,7 @@ require_once 'helpers/Helper.php';
 
                             <span class="add-to-cart"
                                   data-id="<?php echo $product['id']; ?>">
-                        <a href="#" style="color: inherit">Thêm vào giỏ</a>
+                        <a href="#" style="color: inherit">Add to cart</a>
                     </span>
                         </div>
                     <?php endforeach; ?>

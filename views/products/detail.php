@@ -18,7 +18,7 @@
                     </div>
                     <div class="product-cart">
                         <span data-id="<?php echo $product['id']; ?>" class="add-to-cart">
-                            <i class="fa fa-cart-plus"></i> Thêm vào giỏ
+                            <i class="fa fa-cart-plus"></i> Add to cart
                         </span>
                     </div>
                 </div>

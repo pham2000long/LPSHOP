@@ -27,3 +27,15 @@ RewriteRule thanh-toan-online.html index.php?controller=payment&action=online
 #Rewrite cho trang danh sách sản phẩm có filter
 RewriteRule danh-sach-san-pham.html index.php?controller=product&action=showall
 RewriteRule cam-on.html index.php?controller=payment&action=thankyou
+# Rewrite cho trang liên hệ
+RewriteRule contact.html index.php?controller=contact&action=index
+# Rewrite cho trang chủ
+RewriteRule index.html index.php
+# Rewrite cho trang đăng nhập
+RewriteRule login.html index.php?controller=user&action=login
+# Rewrite cho trang đăng nhập
+RewriteRule register.html index.php?controller=user&action=register
+# Rewrite cho trang women
+RewriteRule women.html index.php?controller=home&action=women
+# Rewrite cho trang women
+RewriteRule men.html index.php?controller=home&action=men

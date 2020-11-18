@@ -5,10 +5,6 @@ require_once 'models/Category.php';
 require_once 'models/Pagination.php';
 class ProductController extends Controller {
   public function showAll() {
-//    echo "<pre>" . __LINE__ . ", " . __DIR__ . "<br />";
-//    print_r($_REQUEST);
-//    echo "</pre>";
-//    die;
     $params = [];
     //nếu user có hành động filter
     if (isset($_POST['filter'])) {
@@ -22,16 +18,16 @@ class ProductController extends Controller {
         $str_price = '';
         foreach ($_POST['price'] AS $price) {
           if ($price == 1) {
-            $str_price .= " OR products.price < 1000000";
+            $str_price .= " OR products.price < 50";
           }
           if ($price == 2) {
-            $str_price .= " OR (products.price >= 1000000 AND products.price < 20000000)";
+            $str_price .= " OR (products.price >= 50 AND products.price < 55)";
           }
           if ($price == 3) {
-            $str_price .= " OR (products.price >= 2000000 AND products.price < 30000000)";
+            $str_price .= " OR (products.price >= 55 AND products.price < 60)";
           }
           if ($price == 4) {
-            $str_price .= " OR products.price >= 3000000";
+            $str_price .= " OR products.price >= 60";
           }
         }
         //cắt bỏ từ khóa OR ở vị trí ban đầu
@@ -41,11 +37,11 @@ class ProductController extends Controller {
       }
     }
 
-    $params_pagination = [
-      'total' => 5,
-      'limit' => 1,
-      'full_mode' => FALSE,
-    ];
+//    $params_pagination = [
+//      'total' => 5,
+//      'limit' => 1,
+//      'full_mode' => FALSE,
+//    ];
     //xử lý phân trang
 //    $pagination_model = new Pagination($params_pagination);
 //    $pagination = $pagination_model->getPagination();
@@ -60,7 +56,7 @@ class ProductController extends Controller {
     $this->content = $this->render('views/products/show_all.php', [
       'products' => $products,
       'categories' => $categories
-//      'pagination' => $pagination,
+//     'pagination' => $pagination
     ]);
 
     require_once 'views/layouts/main.php';

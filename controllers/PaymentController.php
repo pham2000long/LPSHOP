@@ -66,18 +66,18 @@ class PaymentController extends Controller {
           $order_detail_model->product_id = $product_id;
           $order_detail_model->quantity = $cart['quantity'];
           // + Gọi phương thức insert của model
-          $is_insert = $order_detail_model->insert();
-          var_dump($is_insert);
+          $order_detail_model->insert();
+
         }
         // + Gửi mail cho khách hàng về thông tin đơn hàng
         // + Sử dụng phương thức tĩnh sendMail của class Helper
         // + Khai báo các giá trị để chuẩn bị truyền vào phương
         //thức sendMail
-        $subject = "Từ Abc.com - Thông tin của bạn";
-        $username = 'nguyenvietmanhit@gmail.com';
+        $subject = "Từ LP Shop - Thông tin của bạn";
+        $username = 'bangnk2000@gmail.com';
         // Truy cập https://myaccount.google.com/ để lấy mật
         //khẩu ứng dụng
-        $password = 'yichffdzhetottuw';
+        $password = 'onckpuofqcriqote';
         // Nội dung mail, lấy nội dung mail mẫu về bán hàng tại
         //đường dẫn views/payments/mail_template_order.php
         $info_customer = [
@@ -86,9 +86,11 @@ class PaymentController extends Controller {
           'email' => $email,
           'address' => $address
         ];
+        $product = $_SESSION['cart'];
         $body =
         $this->render('views/payments/mail_template_order.php', [
-            'info_customer' => $info_customer
+            'info_customer' => $info_customer,
+            'order_id' => $order_id
         ]);
         Helper::sendMail($email, $subject,
             $body, $username, $password);
@@ -112,7 +114,8 @@ class PaymentController extends Controller {
           header("Location: thanh-toan-online.html");
           exit();
         } else {
-          header('Location: cam-on.html');
+            $_SESSION['success'] = 'Bạn đã đặt hàng thành công, chúc bạn tiếp tục mua sắm vui vẻ';
+          header('Location: index.php');
           exit();
         }
       }
@@ -136,7 +139,7 @@ class PaymentController extends Controller {
     unset($_SESSION['nganluong_info']);
   }
   public function thankyou() {
-      $this->render('views/payments/thank.php');
+      $this->render('views/payments/thank.php', []);
       require_once 'views/layouts/main.php';
   }
 }

@@ -9,10 +9,10 @@ require_once 'helpers/Helper.php';
             <table class="table table-bordered">
                 <tbody>
                 <tr>
-                    <th width="40%">Tên sản phẩm</th>
-                    <th width="12%">Số lượng</th>
-                    <th>Giá</th>
-                    <th>Thành tiền</th>
+                    <th width="40%">Product name</th>
+                    <th width="12%">Quantity</th>
+                    <th>Price</th>
+                    <th>Subtotal</th>
                     <th></th>
                 </tr>
                 <?php
@@ -51,10 +51,10 @@ require_once 'helpers/Helper.php';
                                    value="<?php echo $cart['quantity']; ?>">
                         </td>
                         <td>
-                            <?php echo number_format($cart['price']); ?>
+                            $ <?php echo number_format($cart['price']); ?>
                         </td>
                         <td>
-                            <?php
+                            $ <?php
                             $total_item = $cart['quantity'] * $cart['price'];
                             //Cộng tích lũy thành tiền này cho tổng giá trị
                             //đơn hàng
@@ -75,7 +75,7 @@ require_once 'helpers/Helper.php';
 
                 <tr>
                     <td colspan="5" style="text-align: right">
-                        Tổng giá trị đơn hàng:
+                        Current total: $
                         <span class="product-price">
                            <?php echo number_format($total_cart); ?>
                         </span>

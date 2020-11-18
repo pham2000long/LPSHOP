@@ -28,38 +28,7 @@ class User extends Model {
         }
     }
 
-    public function getAll() {
-        $obj_select = $this->connection
-            ->prepare("SELECT * FROM users
-                WHERE TRUE $this->str_search
-                ORDER BY updated_at DESC, created_at DESC ");
-        $obj_select->execute();
-        $users = $obj_select->fetchAll(PDO::FETCH_ASSOC);
-        return $users;
-    }
 
-    public function getAllPagination($params = []) {
-        $limit = $params['limit'];
-        $page = $params['page'];
-        $start = ($page - 1) * $limit;
-        $obj_select = $this->connection
-            ->prepare("SELECT * FROM users 
-                WHERE TRUE $this->str_search
-                ORDER BY created_at DESC
-              LIMIT $start, $limit");
-
-        $obj_select->execute();
-        $users = $obj_select->fetchAll(PDO::FETCH_ASSOC);
-
-        return $users;
-    }
-
-    public function getTotal() {
-        $obj_select = $this->connection
-            ->prepare("SELECT COUNT(id) FROM users WHERE TRUE $this->str_search");
-        $obj_select->execute();
-        return $obj_select->fetchColumn();
-    }
 
     public function getById($id) {
         $obj_select = $this->connection
@@ -68,32 +37,7 @@ class User extends Model {
         return $obj_select->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function getUserByUsername($username) {
-        $obj_select = $this->connection
-            ->prepare("SELECT COUNT(id) FROM users WHERE username='$username'");
-        $obj_select->execute();
-        return $obj_select->fetchColumn();
-    }
 
-    public function insert() {
-        $obj_insert = $this->connection
-            ->prepare("INSERT INTO users(username, password, first_name, last_name, phone, address, email, avatar, jobs, facebook, status)
-VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, :avatar, :jobs, :facebook, :status)");
-        $arr_insert = [
-            ':username' => $this->username,
-            ':password' => $this->password,
-            ':first_name' => $this->first_name,
-            ':last_name' => $this->last_name,
-            ':phone' => $this->phone,
-            ':address' => $this->address,
-            ':email' => $this->email,
-            ':avatar' => $this->avatar,
-            ':jobs' => $this->jobs,
-            ':facebook' => $this->facebook,
-            ':status' => $this->status,
-        ];
-        return $obj_insert->execute($arr_insert);
-    }
 
     public function update() {
         $obj_update = $this->connection
@@ -117,16 +61,11 @@ VALUES(:username, :password, :first_name, :last_name, :phone, :address, :email, 
 
         return $obj_update->execute($arr_update);
     }
-    public function delete($id)
-    {
-        $obj_delete = $this->connection
-            ->prepare("DELETE FROM users WHERE id = $id");
-        return $obj_delete->execute();
-    }
+
 
     public function getUserByUsernameAndPassword($username, $password) {
         $obj_select = $this->connection
-            ->prepare("SELECT * FROM users WHERE username=:username AND password=:password AND status = 1 LIMIT 1");
+            ->prepare("SELECT * FROM users WHERE username=:username AND password=:password LIMIT 1");
         $arr_select = [
             ':username' => $username,
             ':password' => $password,
@@ -149,15 +88,7 @@ VALUES(:username, :password, :status)");
         ];
         return $obj_insert->execute($arr_insert);
     }
-    public function findUser() {
-        $obj_find = $this->connection->prepare("SELECT * FROM users WHERE email=:email");
-        $arr_find = [
-            ':email' => $this->email
-        ];
-        $obj_find->execute($arr_find);
-        $mail = $obj_find->fetch(PDO::FETCH_ASSOC);
-        return $mail;
-    }
+
     public function changePassword($id) {
         $obj_change = $this->connection->prepare("UPDATE users SET password = :password WHERE id = $id");
         $arr_change = [

@@ -36,11 +36,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-8">
-                <ul class="filter__controls">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".women">Women’s</li>
-                    <li data-filter=".men">Men’s</li>
-                </ul>
+
             </div>
         </div>
         <?php if (!empty($products)): ?>
@@ -60,12 +56,12 @@
                         </ul>
                     </div>
                     <div class="product__item__text">
-                        <h6><a href="#"><?php echo $product['title'] ?></a></h6>
+                        <h6><a href="<?php echo $product_link; ?>"><?php echo $product['title'] ?></a></h6>
                         <div class="product__price">$ <?php echo number_format($product['price']) ?></div>
 
                             <span class="add-to-cart"
                                   data-id="<?php echo $product['id']; ?>">
-                                <a href="#" style="color: white">Thêm vào giỏ</a>
+                                <a href="#" style="color: white">Add to cart</a>
                             </span>
 
                     </div>

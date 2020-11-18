@@ -1542,7 +1542,7 @@ td .product-avatar.img-responsive {
 
 .add-to-cart {
     display: block;
-    background: #21431e;
+    background: rgba(26,26,26,0.92);
     color: #fff;
     font-size: 14px;
     padding: 6px 15px;

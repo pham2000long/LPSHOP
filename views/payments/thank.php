@@ -1,2 +1,8 @@
 
-    <h1>Cảm ơn bạn đã đặt hàng, vui lòng kiểm tra mail để xem chi tiết đơn hàng của bạn</h1>
+<!-- Contact Section Begin -->
+<section class=" spad">
+    <div class="container">
+       <div>Cảm ơn quy khách đã đặt hàng</div>
+    </div>
+</section>
+<!-- Contact Section End -->

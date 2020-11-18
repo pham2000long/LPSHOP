@@ -55,12 +55,13 @@ require_once 'helpers/Helper.php';
                     }
                   }
                   ?>
-                    <input type="checkbox" name="price[]" value="1" <?php echo $price1_checked; ?> /> Dưới 1tr <br/>
-                    <input type="checkbox" name="price[]" value="2" <?php echo $price2_checked; ?> /> Từ 1 - 2tr
+                    <input type="checkbox" name="price[]" value="1" <?php echo $price1_checked; ?> /> Down to $50
                     <br/>
-                    <input type="checkbox" name="price[]" value="3" <?php echo $price3_checked; ?> /> Từ 2 - 3tr
+                    <input type="checkbox" name="price[]" value="2" <?php echo $price2_checked; ?> /> From $50 To $55
                     <br/>
-                    <input type="checkbox" name="price[]" value="4" <?php echo $price4_checked; ?> /> Trên 3tr
+                    <input type="checkbox" name="price[]" value="3" <?php echo $price3_checked; ?> /> From $55 To $60
+                    <br/>
+                    <input type="checkbox" name="price[]" value="4" <?php echo $price4_checked; ?> /> Up to $60
                     <br/>
                 </div>
                 <div class="form-group">
@@ -73,7 +74,6 @@ require_once 'helpers/Helper.php';
             <h2>Danh sách sản phẩm</h2>
           <?php if (!empty($products)): ?>
               <h1 class="post-list-title">
-                  <a href="danh-sach-san-pham.html" class="link-category-item">Sản phẩm mới nhất</a>
               </h1>
               <div class="link-secondary-wrap row">
                 <?php foreach ($products AS $product):
@@ -97,12 +97,12 @@ require_once 'helpers/Helper.php';
                         <br>
                         <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">
                         <a href="<?php echo $product_cart_add ?>"
-                        style="color: white">Thêm vào giỏ</a>
+                        style="color: white">Add to cart</a>
                     </span>
                         </div>
                 <?php endforeach; ?>
 
-<!--                --><?php //echo $pagination; ?>
+<!--               --><?php //echo $pagination; ?>
               </div>
           <?php endif; ?>
         </div>

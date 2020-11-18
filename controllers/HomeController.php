@@ -12,4 +12,23 @@ class HomeController extends Controller {
     ]);
     require_once 'views/layouts/main.php';
   }
+    public function women() {
+        $product_model = new Product();
+        $products = $product_model->getProductInWomenPage();
+
+        $this->content = $this->render('views/homes/women.php', [
+            'products' => $products,
+        ]);
+        require_once 'views/layouts/main.php';
+    }
+
+    public function men() {
+        $product_model = new Product();
+        $products = $product_model->getProductInMenPage();
+
+        $this->content = $this->render('views/homes/men.php', [
+            'products' => $products,
+        ]);
+        require_once 'views/layouts/main.php';
+    }
 }

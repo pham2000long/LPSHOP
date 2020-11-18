@@ -1,9 +1,6 @@
 <?php
 ?>
 <html>
-<head>
-
-</head>
 <header class="header">
     <div class="container-fluid">
         <div class="row">
@@ -15,9 +12,9 @@
             <div class="col-xl-6 col-lg-7">
                 <nav class="header__menu">
                     <ul>
-                        <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="#">Women’s</a></li>
-                        <li><a href="#">Men’s</a></li>
+                        <li ><a href="index.php">Home</a></li>
+                        <li><a href="women.html">Women’s</a></li>
+                        <li><a href="men.html">Men’s</a></li>
                         <li><a href="danh-sach-san-pham.html">Shop</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./contact.html">Contact</a></li>
@@ -27,8 +24,8 @@
             <div class="col-lg-3">
                 <div class="header__right">
                     <div class="header__right__auth">
-                        <a href="#">Login</a>
-                        <a href="#">Register</a>
+                        <a href="login.html">Login</a>
+                        <a href="register.html">Register</a>
                     </div>
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>

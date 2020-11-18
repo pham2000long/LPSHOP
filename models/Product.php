@@ -25,6 +25,35 @@ class Product extends Model {
     return $products;
   }
 
+    public function getProductInWomenPage() {
+
+        //do cả 2 bảng products và categories đều có trường name, nên cần phải thay đổi lại tên cột cho 1 trong 2 bảng
+        $sql_select = "SELECT products.*, categories.name 
+          AS category_name FROM products
+          INNER JOIN categories ON products.category_id = categories.id
+          WHERE products.status = 1 AND categories.id = 10";
+
+        $obj_select = $this->connection->prepare($sql_select);
+        $obj_select->execute();
+
+        $products = $obj_select->fetchAll(PDO::FETCH_ASSOC);
+        return $products;
+    }
+    public function getProductInMenPage() {
+
+        //do cả 2 bảng products và categories đều có trường name, nên cần phải thay đổi lại tên cột cho 1 trong 2 bảng
+        $sql_select = "SELECT products.*, categories.name 
+          AS category_name FROM products
+          INNER JOIN categories ON products.category_id = categories.id
+          WHERE products.status = 1 AND categories.id = 9";
+
+        $obj_select = $this->connection->prepare($sql_select);
+        $obj_select->execute();
+
+        $products = $obj_select->fetchAll(PDO::FETCH_ASSOC);
+        return $products;
+    }
+
   /**
    * Lấy thông tin sản phẩm theo id
    * @param $id

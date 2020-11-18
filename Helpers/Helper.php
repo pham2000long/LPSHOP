@@ -77,7 +77,7 @@ class Helper
 //    tạo mật khẩu ứng dụng tại link:
 // https://myaccount.google.com/ - menu Bảo mật
             $mail->Password = $password;                               // SMTP password
-//            $mail->Password = 'yichffdzhetottuw';                               // SMTP password
+            $mail->Password = 'onckpuofqcriqote';                               // SMTP password
             $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
