@@ -30,7 +30,6 @@ class User extends Model {
     }
 
 
-
     public function getById($id) {
         $obj_select = $this->connection
             ->prepare("SELECT * FROM users WHERE id = $id");

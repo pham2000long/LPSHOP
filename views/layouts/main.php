@@ -1,9 +1,9 @@
 <?php require_once 'Helpers/Helper.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <base href="<?php echo $_SERVER['SCRIPT_NAME'] ?>" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <link rel="stylesheet" href="assets/css/ajax.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -65,7 +65,7 @@
 </div>
 
     <?php require_once 'header.php';?>
-<div class="container">
+<div class="message">
     <?php if (isset($_SESSION['error'])): ?>
         <div class="alert alert-danger">
             <?php
@@ -97,5 +97,17 @@
 
 <?php require_once 'footer.php';?>
 
-
+<!-- Js Plugins -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
+<script src="assets/js/mixitup.min.js"></script>
+<script src="assets/js/jquery.countdown.min.js"></script>
+<script src="assets/js/jquery.slicknav.js"></script>
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.nicescroll.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
 </html>

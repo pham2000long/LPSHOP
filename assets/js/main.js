@@ -32,6 +32,7 @@ $(document).ready(function () {
             // nơi nhận kết quả trả về từ url, tất cả dữ liệu
             //đó đc lưu trong tham số data của hàm
             success: function(data) {
+                console.log(data);
                 //Sử dụng tab Network của trình duyệt để debug
                 //các thông tin liên quan đến gọi ajax
                 //Đã có sẵn 1 class = ajax-message đang ẩn để
@@ -45,7 +46,6 @@ $(document).ready(function () {
                 setTimeout(function(){
                     $('.ajax-message').removeClass('ajax-message-active')
                 }, 3000);
-                $('.ajax-message').remove();
                 //Xử lý update số lượng trong giỏ
                 //Lấy nội dung của class cart-amount
                 var cart_total = $('.cart-amount').html();

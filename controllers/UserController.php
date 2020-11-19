@@ -2,6 +2,7 @@
 require_once 'controllers/Controller.php';
 require_once 'models/User.php';
 
+
 class UserController extends Controller {
     public function index() {
         $user_model = new User();
@@ -119,13 +120,13 @@ class UserController extends Controller {
     }
 
     public function login() {
-        //nếu user đã đăngn nhập r thì ko cho truy cập lại trang login, mà chuenr hướng tới backend
+        //nếu user đã đăng nhập r thì ko cho truy cập lại trang login, mà chuenr hướng tới backend
         if (isset($_SESSION['user'])) {
             header('Location: index.php');
             exit();
         }
         if (isset($_POST['submit'])) {
-//            die;
+
             $username = $_POST['username'];
             //do password đang lưu trong CSDL sử dụng cơ chế mã hóa md5 nên cần phải thêm
 //            hàm md5 cho password
@@ -154,10 +155,9 @@ class UserController extends Controller {
     }
 
     /**
-     * Đăng ký tài khoản mới, mặc định tất cả các user đều có quyền admin
+     * Đăng ký tài khoản mới, mặc định tất cả các user đều là user
      */
     public function register() {
-
         if (isset($_POST['submit'])) {
             $user_model = new User();
             $username = $_POST['username'];
@@ -180,7 +180,6 @@ class UserController extends Controller {
                 //do đang sử dụng cơ chế mã hóa này cho quy trình login
                 $user_model->password = md5($password);
                 $user_model->status = 1;
-                $user_model->roles = 0;
                 $is_insert = $user_model->insertRegister();
                 if ($is_insert) {
                     $_SESSION['success'] = 'Đăng ký thành công';
