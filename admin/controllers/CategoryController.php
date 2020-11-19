@@ -7,49 +7,39 @@ class CategoryController extends Controller
 {
     public function index()
   {
-    //hiển thị danh sách category
     $category_model = new Category();
-    //do có sử dụng phân trang nên sẽ khai báo mảng các params
-    $params = [
-      'limit' => 5, //giới hạn 5 bản ghi 1 trang
-      'query_string' => 'page',
-      'controller' => 'category',
-      'action' => 'index',
-      'full_mode' => FALSE,
-    ];
-//    mặc đinh page hiện tại là 1
-    $page = 1;
-    //nếu có truyền tham số page lên trình duyêt - tương đương đang ở tại trang nào, thì gán giá trị đó cho biến $page
-    if (isset($_GET['page'])) {
-      $page = $_GET['page'];
-    }
-    //xử lý form tìm kiếm
-    if (isset($_GET['name'])) {
-      $params['query_additional'] = '&name=' . $_GET['name'];
-    }
 
-    //lấy tổng số bản ghi dựa theo các điều kiện có được từ mảng params truyền vào
-    $count_total = $category_model->countTotal();
-    $params['total'] = $count_total;
+      //lấy tổng số bản ghi đang có trong bảng categories
+      $count_total = $category_model->countTotal();
+      //        xử lý phân trang
+      $query_additional = '';
+      if (isset($_GET['name'])) {
+          $query_additional .= '&name=' . $_GET['name'];
+      }
+      $arr_params = [
+          'total' => $count_total,
+          'limit' => 5,
+          'query_string' => 'page',
+          'controller' => 'product',
+          'action' => 'index',
+          'full_mode' => false,
+          'query_additional' => $query_additional,
+          'page' => isset($_GET['page']) ? $_GET['page'] : 1
+      ];
+      $categories = $category_model->getAllPagination($arr_params);
+      $pagination = new Pagination($arr_params);
 
-    //gán biến name cho mảng params với key là name
-    $params['page'] = $page;
-    $pagination = new Pagination($params);
-    //lấy ra html phân trang
-    $pages = $pagination->getPagination();
+      $pages = $pagination->getPagination();
 
-    //lấy danh sách category sử dụng phân trang
-    $categories = $category_model->getAllPagination($params);
+      //lấy danh sách category đang có trên hệ thống để phục vụ cho search
+      $category_model = new Category();
+      $categories = $category_model->getAll();
 
-    $this->content = $this->render('views/categories/index.php', [
-      //truyền biến $categories ra vew
-      'categories' => $categories,
-      //truyền biến phân trang ra view
-      'pages' => $pages,
-    ]);
-
-    //gọi layout để nhúng thuộc tính $this->content
-    require_once 'views/layouts/main.php';
+      $this->content = $this->render('views/categories/index.php', [
+          'categories' => $categories,
+          'pages' => $pages,
+      ]);
+      require_once 'views/layouts/main.php';
   }
 
   public function create()

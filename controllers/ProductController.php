@@ -8,7 +8,7 @@ class ProductController extends Controller {
     $params = [];
     //nếu user có hành động filter
     if (isset($_POST['filter'])) {
-        if (isset($_POST['']))
+
       if (isset($_POST['category'])) {
         $category = implode(',', $_POST['category']);
         //chuyển thành chuỗi sau để sử dụng câu lệnh in_array
@@ -36,17 +36,13 @@ class ProductController extends Controller {
         $str_price = "($str_price)";
         $params['price'] = $str_price;
       }
+      if (isset($_POST['title'])){
+            $name = $_POST['title'];
+            $params['title'] = $name;
+        }
     }
 
-//    $params_pagination = [
-//      'total' => 5,
-//      'limit' => 1,
-//      'full_mode' => FALSE,
-//    ];
-    //xử lý phân trang
-//    $pagination_model = new Pagination($params_pagination);
-//    $pagination = $pagination_model->getPagination();
-    //get products
+
     $product_model = new Product();
     $products = $product_model->getProductInHomePage($params);
 
@@ -57,7 +53,7 @@ class ProductController extends Controller {
     $this->content = $this->render('views/products/show_all.php', [
       'products' => $products,
       'categories' => $categories
-//     'pagination' => $pagination
+
     ]);
 
     require_once 'views/layouts/main.php';
