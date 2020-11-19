@@ -65,8 +65,8 @@
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-switch">+</div>
         <form class="search-model-form" method="post" action="danh-sach-san-pham.html">
-            <input type="text" id="search-input" placeholder="Search here.....">
-            <input class="btn btn-secondary" type="submit" value="Search">
+            <input type="text" id="search-input" name="title" placeholder="Search here.....">
+            <input class="btn btn-secondary" type="submit" name="filter" value="Search">
         </form>
     </div>
 </div>

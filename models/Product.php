@@ -12,6 +12,10 @@ class Product extends Model {
       $str_price = $params['price'];
       $str_filter .= " AND $str_price";
     }
+    if (isset($params['title'])) {
+        $str_title = $params['title'];
+        $str_filter .= " AND products.title LIKE '%$str_title%'";
+    }
     //do cả 2 bảng products và categories đều có trường name, nên cần phải thay đổi lại tên cột cho 1 trong 2 bảng
     $sql_select = "SELECT products.*, categories.name 
           AS category_name FROM products

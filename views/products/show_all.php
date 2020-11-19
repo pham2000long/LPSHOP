@@ -7,12 +7,8 @@ require_once 'helpers/Helper.php';
 <div class="container">
     <div class="row">
         <div class="main-left col-md-3 col-sm-3 col-xs-12">
-            <h3>Search and Filter</h3>
+            <h3>Filter and Search</h3>
             <form action="" method="POST">
-                <div class="form-group">
-                    <b>Search</b> <br>
-                    <input type="text" name="name">
-                </div>
               <?php if (!empty($categories)): ?>
                   <div class="form-group">
                       <b>Category</b> <br/>
@@ -69,6 +65,10 @@ require_once 'helpers/Helper.php';
                     <br/>
                 </div>
                 <div class="form-group">
+                    <div class="form-group">
+                        <b>Search</b> <br>
+                        <input type="text" name="title" value="<?php echo $_POST['title']?>">
+                    </div>
                     <input type="submit" name="filter" value="Filter" class="btn btn-primary"/>
                     <a href="danh-sach-san-pham.html" class="btn btn-secondary">Clear</a>
                 </div>
