@@ -30,18 +30,16 @@ class User extends Model {
     }
 
 
+    public function getUserByUsername($username){
+        $obj_select = $this->connection->prepare("SELECT * FROM users WHERE username = $username");
+        $obj_select->execute();
+        return $obj_select->fetch(PDO::FETCH_ASSOC);
+    }
     public function getById($id) {
         $obj_select = $this->connection
             ->prepare("SELECT * FROM users WHERE id = $id");
         $obj_select->execute();
         return $obj_select->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function getUserByUsername($username) {
-        $obj_select = $this->connection
-            ->prepare("SELECT COUNT(id) FROM users WHERE username='$username'");
-        $obj_select->execute();
-        return $obj_select->fetchColumn();
     }
 
     public function update() {
@@ -86,6 +84,7 @@ class User extends Model {
         $obj_insert = $this->connection
             ->prepare("INSERT INTO users(username, password, first_name, last_name, address, email, status, roles)
 VALUES(:username, :password, :first_name, :last_name, :address, :email, :status, :roles)");
+
         $arr_insert = [
             ':username' => $this->username,
             ':password' => $this->password,

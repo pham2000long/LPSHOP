@@ -132,6 +132,9 @@ class UserController extends Controller {
     public function register() {
         if (isset($_POST['submit'])) {
             $user_model = new User();
+            $fisrt_name = $_POST['first_name'];
+            $last_name = $_POST['last_name'];
+            $email = $_POST['email'];
             $username = $_POST['username'];
             $password = $_POST['password'];
             $email = $_POST['email'];
@@ -142,7 +145,7 @@ class UserController extends Controller {
             $password_confirm = $_POST['password_confirm'];
             $user = $user_model->getUserByUsername($username);
             //check validate
-            if (empty($username) || empty($password) || empty($password_confirm)) {
+            if (empty($fisrt_name) || empty($last_name) || empty($username) || empty($email) ||  empty($password) || empty($password_confirm)) {
                 $this->error = 'Không được để trống các trường';
             } else if ($password != $password_confirm) {
                 $this->error = 'Password nhập lại chưa đúng';
@@ -151,7 +154,8 @@ class UserController extends Controller {
             }
             //xử lý lưu dữ liệu khi không có lỗi
             if (empty($this->error)) {
-
+                $user_model->first_name = $fisrt_name;
+                $user_model->last_name = $last_name;
                 $user_model->username = $username;
                 $user_model->email = $email;
                 $user_model->first_name = $first_name;
