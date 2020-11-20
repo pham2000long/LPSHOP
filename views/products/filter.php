@@ -81,11 +81,11 @@ require_once 'helpers/Helper.php';
                 <div class="link-secondary-wrap row">
                     <?php foreach ($products AS $product):
                         $slug = Helper::getSlug($product['title']);
-                        $product_link = "san-pham/$slug/" . $product['id'] . ".html";
+                        $url_detail = "index.php?controller=product&action=detail&id=" . $product['id'];
                         $product_cart_add = "them-vao-gio-hang/" . $product['id'] . ".html";
                         ?>
                         <div class="service-link col-md-3 col-sm-6 col-xs-12">
-                            <a href="<?php echo $product_link; ?>">
+                            <a href="<?php echo $url_detail; ?>">
                                 <img class="secondary-img img-responsive" title="<?php echo $product['title'] ?>"
                                      src="../backend/assets/uploads/<?php echo $product['avatar'] ?>"
                                      alt="<?php echo $product['title'] ?>"/>

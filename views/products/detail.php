@@ -1,5 +1,5 @@
 <?php
-
+    require_once 'Helpers/Helper.php';
 ?>
 <div class="container">
     <div class="row">

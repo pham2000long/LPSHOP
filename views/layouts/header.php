@@ -1,6 +1,5 @@
 <?php
 ?>
-<html>
 <header class="header">
     <div class="container-fluid">
         <div class="row">
@@ -85,4 +84,4 @@
     </div>
 </header>
 <div class="ajax-message"></div>
-</html>
+

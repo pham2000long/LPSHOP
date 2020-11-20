@@ -162,6 +162,7 @@ class UserController extends Controller {
             $user_model = new User();
             $username = $_POST['username'];
             $password = $_POST['password'];
+
             $password_confirm = $_POST['password_confirm'];
             $user = $user_model->getUserByUsername($username);
             //check validate

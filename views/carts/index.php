@@ -32,9 +32,9 @@ require_once 'helpers/Helper.php';
                                 <?php
                                 //Khai báo link rewrite cho trang chi tiết sản phẩm
                                 $slug = Helper::getSlug($cart['name']);
-                                $product_link = "chi-tiet-san-pham/$slug/$product_id";
+                                $url_detail = "index.php?controller=product&action=detail&id=" . $product_id;
                                 ?>
-                                <a href="<?php echo $product_link; ?>"
+                                <a href="<?php echo $url_detail; ?>"
                                    class="content-product-a">
                                     <?php echo $cart['name']; ?>
                                 </a>
