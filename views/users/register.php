@@ -1,20 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon.css">
-        <link rel="stylesheet" href="assets/css/slicknav.css">
-        <link rel="stylesheet" href="assets/css/animate.min.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="assets/css/themify-icons.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+
     <main>
         <!-- Hero Area Start-->
         <div class="slider-area ">
@@ -23,7 +7,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2>Đăng ký</h2> <br>
+                                <h2>Register</h2> <br>
                             </div>
                         </div>
                     </div>
@@ -58,7 +42,7 @@
                                             placeholder="Tên">
                                     </div>
                                     <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="name" name="name" value=""
+                                        <input type="text" class="form-control" id="name" name="username" value=""
                                             placeholder="Tài khoản">
                                     </div>
                                     <div class="col-md-12 form-group p_star">
@@ -88,7 +72,3 @@
         </section>
         <!--================login_part end =================-->
     </main>
-
-</body>
-    
-</html>
