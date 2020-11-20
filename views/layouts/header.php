@@ -15,8 +15,8 @@
                         <li><a href="women.html">Women’s</a></li>
                         <li><a href="men.html">Men’s</a></li>
                         <li><a href="danh-sach-san-pham.html">Shop</a></li>
-                        <li><a href="./new.html">New</a></li>
-                        <li><a href="./contact.html">Contact</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -65,9 +65,6 @@
                     </div>
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
-                        <li><a href="#"><span class="icon_heart_alt"></span>
-                                <div class="tip">2</div>
-                            </a></li>
                         <li><a href="gio-hang-cua-ban.html"><span class="icon_bag_alt "></span>
                                 <?php
                                 $cart_total = 0;
