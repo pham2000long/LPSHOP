@@ -39,7 +39,13 @@
                                                         max-width: 100%;
                                                         overflow: hidden; display: inline-block;
                                                          vertical-align: middle;">
-                                    <img class="rounded-circle header-profile-user" src="assets/<?php echo "uploads/" . $_SESSION['user']['avatar']; ?>"
+                                    <img class="rounded-circle header-profile-user" src="<?php
+                                    if (isset($_SESSION['user']['avatar'])){
+                                        echo "admin/assets/uploads/" . $_SESSION['user']['avatar'];
+                                    }else {
+                                        echo "admin/assets/images/user.jpg";
+                                    }
+                                    ?>"
                                          alt="Header Avatar"">
                                 </div>
 

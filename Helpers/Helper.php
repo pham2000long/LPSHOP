@@ -106,5 +106,13 @@ class Helper
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
+    public static function getToken()
+    {
+        //Generate a random string.
+        $token = openssl_random_pseudo_bytes(16);
+        //Convert the binary data into hexadecimal representation.
+        $token = bin2hex($token);
+        return $token;
+    }
 
 }

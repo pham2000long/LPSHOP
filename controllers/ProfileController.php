@@ -77,7 +77,7 @@ class ProfileController extends Controller
             exit();
         }
 
-        $this->content = $this->render('views/profile/index.php', [
+        $this->content = $this->render('views/users/index.php', [
                 'user' => $user
         ]);
 
@@ -117,7 +117,7 @@ class ProfileController extends Controller
             header('Location: index.php?controller=profile&action=index');
             exit();
         }
-        $this->content = $this->render('views/profile/changepassword.php', [
+        $this->content = $this->render('views/users/changepassword.php', [
 
         ]);
 

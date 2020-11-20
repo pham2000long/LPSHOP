@@ -39,3 +39,5 @@ RewriteRule register.html index.php?controller=user&action=register
 RewriteRule women.html index.php?controller=home&action=women
 # Rewrite cho trang women
 RewriteRule men.html index.php?controller=home&action=men
+# Rewrite cho trang quên mật khẩu
+RewriteRule forgot.html index.php?controller=user&action=forGotPW

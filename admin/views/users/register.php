@@ -20,7 +20,6 @@
                             <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="username">Email Address</label>
                         <div class="input-group">

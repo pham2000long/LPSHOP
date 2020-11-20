@@ -1,38 +1,10 @@
 <?php
 require_once 'controllers/Controller.php';
 require_once 'models/User.php';
-
+require_once 'models/PasswordReset.php';
+require_once 'helpers/Helper.php';
 
 class UserController extends Controller {
-    public function index() {
-        $user_model = new User();
-        $page = isset($_GET['page']) ? $_GET['page'] : 1;
-        $total = $user_model->getTotal();
-        $query_additional = '';
-        if (isset($_GET['username'])) {
-            $query_additional .= '&username=' . $_GET['username'];
-        }
-        $params = [
-            'total' => $total,
-            'limit' => 5,
-            'query_string' => 'page',
-            'controller' => 'user',
-            'action' => 'index',
-            'full_mode' => false,
-            'query_additional' => $query_additional,
-            'page' => isset($_GET['page']) ? $_GET['page'] : 1
-        ];
-        $pagination = new Pagination($params);
-        $pages = $pagination->getPagination();
-        $users = $user_model->getAllPagination($params);
-
-        $this->content = $this->render('views/users/index.php', [
-            'users' => $users,
-            'pages' => $pages
-        ]);
-
-        require_once 'views/layouts/main.php';
-    }
 
 
     public function update() {
@@ -162,6 +134,10 @@ class UserController extends Controller {
             $user_model = new User();
             $username = $_POST['username'];
             $password = $_POST['password'];
+            $email = $_POST['email'];
+            $first_name = $_POST['first_name'];
+            $last_name = $_POST['last_name'];
+            $address = $_POST['address'];
 
             $password_confirm = $_POST['password_confirm'];
             $user = $user_model->getUserByUsername($username);
@@ -177,10 +153,15 @@ class UserController extends Controller {
             if (empty($this->error)) {
 
                 $user_model->username = $username;
+                $user_model->email = $email;
+                $user_model->first_name = $first_name;
+                $user_model->last_name = $last_name;
+                $user_model->address = $address;
                 //chú ý password khi lưu vào bảng users sẽ được mã hóa md5 trước khi lưu
                 //do đang sử dụng cơ chế mã hóa này cho quy trình login
                 $user_model->password = md5($password);
                 $user_model->status = 1;
+                $user_model->roles = 0;
                 $is_insert = $user_model->insertRegister();
                 if ($is_insert) {
                     $_SESSION['success'] = 'Đăng ký thành công';
@@ -199,7 +180,7 @@ class UserController extends Controller {
     /**
      *  Quên mật khẩu
      */
-    public function forGotpw() {
+    public function forGotPW() {
 //        echo "<pre>";
 //        print_r($_POST);
 //        echo "<pre>";
@@ -225,8 +206,8 @@ class UserController extends Controller {
                     $_SESSION['success'] = 'Vui lòng kiểm tra email của bạn';
                     $subject = "Từ LPSHOP.com - Quên mật khẩu";
                     $username = 'bangnk2000@gmail.com';
-                    $password = 'froucfwmoarpouiq';
-                    $link = "http://localhost/lpshop/admin/index.php?controller=login&action=resetPassword&token=$token";
+                    $password = 'onckpuofqcriqote';
+                    $link = "http://localhost/lpshop/index.php?controller=user&action=resetPassword&token=$token";
                     $body = $this->render('views/users/mail_template_pw.php',[
                         'link' => $link
                     ]);
@@ -242,12 +223,9 @@ class UserController extends Controller {
         require_once 'views/layouts/main.php';
     }
     public function resetPassword() {
-//        echo "<pre>";
-//        print_r($_GET);
-//        print_r($_POST);
-//        echo "<pre>";
+
         if (!isset($_GET['token'])){
-            header("Location: index.php?controller=user&action=login");
+            header("Location: login.html");
             exit();
         }
         if (isset($_POST['submit'])) {
@@ -273,21 +251,11 @@ class UserController extends Controller {
                 }else {
                     $_SESSION['error'] = 'Password change failed';
                 }
-                header("Location: index.php?controller=login&action=login");
+                header("Location: login.html");
                 exit();
             }
         }
         $this->content = $this->render('views/users/restpw.php');
-        require_once 'views/layouts/main_login.php';
-    }
-
-    public function logout() {
-//        session_destroy();
-        $_SESSION = [];
-//        session_destroy();
-        unset($_SESSION['user']);
-        $_SESSION['success'] = 'Logout success';
-        header('Location: index.php');
-        exit();
+        require_once 'views/layouts/main.php';
     }
 }

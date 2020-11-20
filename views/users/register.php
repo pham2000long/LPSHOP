@@ -49,32 +49,31 @@
                             <div class="login_part_form_iner">
 
                                 <form class="row contact_form" action="" method="post">
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="first_name" name="first_name" value=""
-                                            placeholder="Họ">
+                                    <div class="form-group">
+                                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
                                     </div>
-                                    <div class="col-md-12 form-group p_star">
+                                    <div class="form-group">
+                                            <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="password" class="form-control" name="password" id="userpassword" placeholder="Enter password">
+                                    </div>
+                                    <div class="form-group">
+                                            <input type="password" class="form-control" name="password_confirm" id="confirmpassword" placeholder="Confirm password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name">
+                                    </div>
+                                    <div class="form-group">
                                         <input type="text" class="form-control" id="name" name="last_name" value=""
-                                            placeholder="Tên">
+                                               placeholder="Last name">
                                     </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="name" name="name" value=""
-                                            placeholder="Tài khoản">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="email" name="email" value=""
-                                            placeholder="Email">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="password" name="password" value=""
-                                            placeholder="Mật khẩu">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="respassword" name="respassword" value=""
-                                            placeholder="Nhập lại mật khẩu">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="address" name="address" value=""
+                                               placeholder="Address">
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <button type="submit" value="submit" class="btn_3">
+                                        <button type="submit" value="submit" name="submit" class="btn_3">
                                            Đăng ký
                                         </button>
                                     </div>

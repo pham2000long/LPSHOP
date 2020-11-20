@@ -37,7 +37,12 @@ class User extends Model {
         return $obj_select->fetch(PDO::FETCH_ASSOC);
     }
 
-
+    public function getUserByUsername($username) {
+        $obj_select = $this->connection
+            ->prepare("SELECT COUNT(id) FROM users WHERE username='$username'");
+        $obj_select->execute();
+        return $obj_select->fetchColumn();
+    }
 
     public function update() {
         $obj_update = $this->connection
@@ -79,17 +84,30 @@ class User extends Model {
 
     public function insertRegister() {
         $obj_insert = $this->connection
-            ->prepare("INSERT INTO users(username, password, status, roles)
-VALUES(:username, :password, :status, :roles)");
+            ->prepare("INSERT INTO users(username, password, first_name, last_name, address, email, status, roles)
+VALUES(:username, :password, :first_name, :last_name, :address, :email, :status, :roles)");
         $arr_insert = [
             ':username' => $this->username,
             ':password' => $this->password,
+            ':first_name' => $this->first_name,
+            ':last_name' => $this->last_name,
+            ':address' => $this->address,
+            ':email' => $this->email,
             ':status' => $this->status,
             ':roles' => $this->roles,
         ];
         return $obj_insert->execute($arr_insert);
     }
-
+    public function findUser() {
+        $obj_find = $this->connection->prepare("SELECT * FROM users WHERE email=:email");
+        $arr_find = [
+            ':email' => $this->email
+        ];
+        $obj_find->execute($arr_find);
+        $mail = $obj_find->fetch(PDO::FETCH_ASSOC);
+        return $mail;
+    }
+    
     public function changePassword($id) {
         $obj_change = $this->connection->prepare("UPDATE users SET password = :password WHERE id = $id");
         $arr_change = [
