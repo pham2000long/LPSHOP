@@ -1,7 +1,6 @@
 <?php
 require_once  'controllers/Controller.php';
 require_once 'models/User.php';
-require_once  'helpers/Helper.php';
 
 class ProfileController extends Controller
 {

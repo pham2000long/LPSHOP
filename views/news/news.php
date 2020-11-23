@@ -1,5 +1,5 @@
 <?php
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 ?>
     <!-- Blog Section Begin -->
     <section class="blog spad">
