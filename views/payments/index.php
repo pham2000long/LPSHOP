@@ -1,5 +1,5 @@
 <?php
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 ?>
 <div class="container">
     <h2>Thanh toán</h2>

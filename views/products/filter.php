@@ -1,5 +1,5 @@
 <?php
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 // Hiển thị danh mục sản phẩm kết hợp chức năng lọc theo danh mục và theo khoảng giá
 /*
  * + Bên trai: phân lọc
