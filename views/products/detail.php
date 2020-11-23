@@ -41,22 +41,5 @@
                      data-numposts="5"></div>
             </div>
         </div>
-        <div class="news-relative-wrap col-md-4 col-sm-4 col-xs-12">
-            <h4 class="link-category-item">Products related to this item</h4>
-            <ul class="news-relative">
-                <li>
-                    <a href='product_detail.html' class="news-relative-link">
-                                <span class="news-relative-img">
-                                <img src="assets/images/samsung-galaxy-note-10-plus-silver-400x460.png"
-                                     alt="no-image" title="SamSung Note 10"
-                                     class="detail-relative-img"/>
-                                </span>
-                        <span class="detail-relative-content">
-                                    SamSung Note 10
-                                </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 </div>

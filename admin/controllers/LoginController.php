@@ -137,7 +137,7 @@ class LoginController
                     $subject = "Từ LPSHOP.com - Quên mật khẩu";
                     $username = 'bangnk2000@gmail.com';
                     $password = 'froucfwmoarpouiq';
-                    $link = "http://localhost/lpshop/admin/index.php?controller=login&action=resetPassword&token=$token";
+                    $link = "http://php0520e-nhom1.itpsoft.com.vn/admin/index.php?controller=login&action=resetPassword&token=$token";
                     $body = $this->render('views/users/mail_template_pw.php',[
                         'link' => $link
                     ]);

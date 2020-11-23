@@ -210,7 +210,7 @@ class UserController extends Controller {
                     $subject = "Từ LPSHOP.com - Quên mật khẩu";
                     $username = 'bangnk2000@gmail.com';
                     $password = 'onckpuofqcriqote';
-                    $link = "http://localhost/lpshop/index.php?controller=user&action=resetPassword&token=$token";
+                    $link = "http://php0520e-nhom1.itpsoft.com.vn/index.php?controller=user&action=resetPassword&token=$token";
                     $body = $this->render('views/users/mail_template_pw.php',[
                         'link' => $link
                     ]);

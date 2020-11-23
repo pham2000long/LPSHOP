@@ -1,5 +1,5 @@
 <?php
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 ?>
 <div class="container">
     <h2>Thanh toán</h2>
@@ -7,34 +7,36 @@ require_once 'helpers/Helper.php';
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <h5 class="center-align">Thông tin khách hàng</h5>
+                <?php if (isset($_SESSION['user'])): ?>
                 <div class="form-group">
-                    <label>Họ tên khách hàng</label>
-                    <input type="text" name="fullname" value="" class="form-control" placeholder="">
+                    <label>Customer's name</label>
+                    <input type="text" name="fullname" value="<?php echo $_SESSION['user']['first_name']. " " .$_SESSION['user']['last_name'];?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
-                    <label>Địa chỉ</label>
-                    <input type="text" name="address" value="" class="form-control" placeholder="">
+                    <label>Address</label>
+                    <input type="text" name="address" value="<?php echo $_SESSION['user']['address']?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
-                    <label>SĐT</label>
-                    <input type="number" min="0" name="mobile" value="" class="form-control" placeholder="">
+                    <label>Phone</label>
+                    <input type="number" min="0" name="mobile" value="<?php echo $_SESSION['user']['phone']?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" min="0" name="email" value="" class="form-control" placeholder="">
+                    <input type="email" min="0" name="email" value="<?php echo $_SESSION['user']['email']?>" class="form-control" placeholder="">
                 </div>
+                <?php endif; ?>
                 <div class="form-group">
-                    <label>Ghi chú thêm</label>
+                    <label>Note</label>
                     <textarea name="note" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Chọn phương thức thanh toán</label> <br />
-                    <input type="radio" name="method" value="0" /> Thanh toán trực tuyến <br />
-                    <input type="radio" name="method" checked value="1" /> COD (dựa vào địa chỉ của bạn) <br />
+                    <label>Select a payment method</label> <br />
+                    <input type="radio" name="method" value="0" /> Online payment <br />
+                    <input type="radio" name="method" checked value="1" /> COD (based on your address) <br />
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
-                <h5 class="center-align">Thông tin đơn hàng của bạn</h5>
+                <h5 class="center-align">Your order information</h5>
               <?php
               //biến lưu tổng giá trị đơn hàng
               $total = 0;
@@ -99,6 +101,6 @@ require_once 'helpers/Helper.php';
             </div>
         </div>
         <input type="submit" name="submit" value="Thanh toán" class="btn btn-primary">
-        <a href="gio-hang-cua-ban.html" class="btn btn-secondary">Về trang giỏ hàng</a>
+        <a href="gio-hang-cua-ban.html" class="btn btn-secondary">Back to cart page</a>
     </form>
 </div>

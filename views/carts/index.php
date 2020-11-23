@@ -1,5 +1,5 @@
 <?php
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 ?>
 <!--Timeline items start -->
 <div class="timeline-items container">
@@ -84,16 +84,16 @@ require_once 'helpers/Helper.php';
                 <tr>
                     <td colspan="5" class="product-payment">
                         <input type="submit" name="submit" value="Cập nhật lại giá" class="btn btn-primary">
-                        <a href="thanh-toan.html" class="btn btn-success">Đến trang thanh toán</a>
+                        <a href="thanh-toan.html" class="btn btn-success">Checkout</a>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </form>
     <?php else: ?>
-        <h2>Giỏ hàng trống</h2>
+        <h2>Your cart is empty</h2>
         <a href="index.php" class="btn btn-primary">
-            Quay lại trang chủ để mua hàng
+            Back to Homepage
         </a>
     <?php endif; ?>
 </div>
