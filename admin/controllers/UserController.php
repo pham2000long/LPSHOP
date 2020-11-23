@@ -12,7 +12,7 @@ class UserController extends Controller {
             if ($permission != 1) {
                 // Nếu không phải admin thì xuất thông báo
                 echo "Bạn không đủ quyền truy cập vào trang này<br>";
-                echo "<a href='http://lpshop.test/admin/index.php?controller=category&action=index'> Click để quay lại</a>";
+                echo "<a href='http://php0520e-nhom1.itpsoft.com.vn/admin/index.php?controller=category&action=index'> Click để quay lại</a>";
                 exit();
             }
         }
