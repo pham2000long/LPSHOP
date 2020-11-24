@@ -2,7 +2,7 @@
 require_once 'controllers/Controller.php';
 require_once 'models/Order.php';
 require_once 'models/OrderDetail.php';
-require_once 'helpers/Helper.php';
+require_once 'Helpers/Helper.php';
 
 class PaymentController extends Controller {
   public function index() {

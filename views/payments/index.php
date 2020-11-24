@@ -7,24 +7,38 @@ require_once 'Helpers/Helper.php';
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <h5 class="center-align">Thông tin khách hàng</h5>
-                <?php if (isset($_SESSION['user'])): ?>
                 <div class="form-group">
                     <label>Customer's name</label>
-                    <input type="text" name="fullname" value="<?php echo $_SESSION['user']['first_name']. " " .$_SESSION['user']['last_name'];?>" class="form-control" placeholder="">
+                    <input type="text" name="fullname" value="<?php
+                     if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['first_name']. " " .$_SESSION['user']['last_name'];
+                    }
+                    ?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
                     <label>Address</label>
-                    <input type="text" name="address" value="<?php echo $_SESSION['user']['address']?>" class="form-control" placeholder="">
+                    <input type="text" name="address" value="<?php
+                    if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['address'];
+                    }
+                    ?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
                     <label>Phone</label>
-                    <input type="number" min="0" name="mobile" value="<?php echo $_SESSION['user']['phone']?>" class="form-control" placeholder="">
+                    <input type="number" min="0" name="mobile" value="<?php
+                    if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['phone'];
+                    }
+                    ?>" class="form-control" placeholder="">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" min="0" name="email" value="<?php echo $_SESSION['user']['email']?>" class="form-control" placeholder="">
+                    <input type="email" min="0" name="email" value="<?php
+                    if (isset($_SESSION['user'])) {
+                        echo $_SESSION['user']['email'];
+                    }
+                    ?>" class="form-control" placeholder="">
                 </div>
-                <?php endif; ?>
                 <div class="form-group">
                     <label>Note</label>
                     <textarea name="note" class="form-control"></textarea>
