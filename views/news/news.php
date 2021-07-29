@@ -14,10 +14,10 @@ require_once 'Helpers/Helper.php';
                     <div class="blog__item">
                         <div class="blog__item__pic set-bg" data-setbg="../admin/assets/uploads/<?php echo $new['avatar'] ?>"></div>
                         <div class="blog__item__text">
-                            <h6><a href="<?php echo $url_detail; ?>"><?php echo $new['title'] ?>"/></a></h6>
+                            <h6><a href="<?php echo $url_detail; ?>"><?php echo $new['title'] ?></a></h6>
                             <ul>
-                                <li><?php echo $new['summary'] ?>"/></li>
-                                <li><?php echo $new['created_at'] ?>"/></li>
+                                <li><?php echo $new['summary'] ?></li>
+                                <li><?php echo $new['created_at'] ?></li>
                             </ul>
                         </div>
                     </div>

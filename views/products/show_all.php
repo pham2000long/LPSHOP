@@ -67,7 +67,7 @@ require_once 'Helpers/Helper.php';
                 <div class="form-group">
                     <div class="form-group">
                         <b>Search</b> <br>
-                        <input type="text" name="title" value="<?php echo $_POST['title']?>">
+                        <input type="text" name="title" value="<?php if(!empty($_POST['title'])) echo $_POST['title'] ?>">
                     </div>
                     <input type="submit" name="filter" value="Filter" class="btn btn-primary"/>
                     <a href="danh-sach-san-pham.html" class="btn btn-secondary">Clear</a>
@@ -99,9 +99,8 @@ require_once 'Helpers/Helper.php';
                            $ <?php echo number_format($product['price']) ?>
                 </span>
                         <br>
-                        <span data-id="<?php echo $product['id'] ?>" class="add-to-cart">
-                        <a href="<?php echo $product_cart_add ?>"
-                        style="color: white">Add to cart</a>
+                        <span data-id="<?php echo $product['id'] ?>" class="add-to-cart" id="add-to-cart">
+                        <a href="#" style="color: white">Add to cart</a>
                     </span>
                         </div>
                 <?php endforeach; ?>

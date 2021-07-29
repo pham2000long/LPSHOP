@@ -84,16 +84,16 @@ require_once 'Helpers/Helper.php';
                 <tr>
                     <td colspan="5" class="product-payment">
                         <input type="submit" name="submit" value="Cập nhật lại giá" class="btn btn-primary">
-                        <a href="thanh-toan.html" class="btn btn-success">Checkout</a>
+                        <a href="thanh-toan.html" class="btn btn-success">Đến trang thanh toán</a>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </form>
     <?php else: ?>
-        <h2>Your cart is empty</h2>
+        <h2>Giỏ hàng trống</h2>
         <a href="index.php" class="btn btn-primary">
-            Back to Homepage
+            Quay lại trang chủ để mua hàng
         </a>
     <?php endif; ?>
 </div>

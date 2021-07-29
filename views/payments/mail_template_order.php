@@ -8,7 +8,7 @@
             - Để thanh toán đơn hàng, bạn hãy chuyển khoản theo thông tin sau:
             <br>
             <b>
-                VCB Nguyen Van Khai <br>
+                VCB NGUYEN KIM BANG <br>
                 112121212121111111 <br>
                 Chi nhành Hà Nội <br>
             </b>

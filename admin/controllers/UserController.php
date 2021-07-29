@@ -258,6 +258,4 @@ class UserController extends Controller {
 
         require_once 'views/layouts/main.php';
     }
-
-
 }

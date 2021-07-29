@@ -17,7 +17,7 @@ RewriteRule gio-hang-cua-ban.html index.php?controller=cart&action=index
 #Viết rewrite cho chức năng Xóa sản phẩm khỏi giỏ hàng
 #Do xóa sản phẩm sẽ theo id, nên url rewrite sẽ có 1 tham số dưới dạng
 # chuỗi regex, [0-9]{1,}
-RewriteRule xoa-san-pham/([0-9]+).html index.php?controller=cart&action=delete&id=$1
+#RewriteRule xoa-san-pham/([0-9]+).html index.php?controller=cart&action=delete&id=$1
 #RewriteRule chi-tiet-tin/(.*)/([0-9]+).html index.php?controller=news&action=detail&title=$1&i=$2
 #RewriteRule san-pham/(.*)/([0-9]+).html index.php?controller=product&action=detail&title=$1&id=$2
 # Rewrite cho trang Thanh toán

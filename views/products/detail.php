@@ -35,11 +35,6 @@
                     </div>
                 </div>
             </div>
-            <div class="detail-comment">
-                <h2 class="link-category-item">Comments</h2>
-                <div class="fb-comments" data-href="https://sukien.net" data-width="100%"
-                     data-numposts="5"></div>
-            </div>
         </div>
     </div>
 </div>
