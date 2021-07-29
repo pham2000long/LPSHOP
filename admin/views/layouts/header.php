@@ -22,11 +22,11 @@
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="assets/<?php
+                    <img class="rounded-circle header-profile-user" src="<?php
                     if (isset($_SESSION['user']['avatar'])){
-                        echo "admin/assets/uploads/" . $_SESSION['user']['avatar'];
+                        echo "../admin/assets/uploads/". $_SESSION['user']['avatar'];
                     }else {
-                        echo "admin/assets/images/user.jpg";
+                        echo "../admin/assets/images/user.jpg";
                     }
                     ?>"
                          alt="Header Avatar" >

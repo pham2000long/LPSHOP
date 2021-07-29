@@ -64,7 +64,7 @@ require_once 'Helpers/Helper.php';
                         </td>
                         <td>
                             <a class="content-product-a"
-                               href="xoa-san-pham/<?php echo $product_id; ?>.html">
+                               href="index.php?controller=cart&action=delete&id=<?php echo $product_id; ?>">
                                 Xóa
                             </a>
                         </td>

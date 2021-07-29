@@ -47,10 +47,10 @@
                 ?>
             <div class="col-lg-3 col-md-4 col-sm-6 mix ">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="../admin/assets/uploads/<?php echo $product['avatar'] ?>">
+                    <div class="product__item__pic set-bg" data-setbg="admin/assets/uploads/<?php echo $product['avatar'] ?>">
 
                         <ul class="product__hover">
-                            <li><a href="../admin/assets/uploads/<?php echo $product['avatar'] ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
+                            <li><a href="admin/assets/uploads/<?php echo $product['avatar'] ?>" class="image-popup"><span class="arrow_expand"></span></a></li>
                             <li><a href="#" data-id="<?php echo $product['id']; ?>"><span class="icon_heart_alt" data-id="<?php echo $product['id']; ?>"></span></a></li>
                         </ul>
                     </div>
